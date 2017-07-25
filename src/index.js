@@ -1,8 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { browserHistory } from "react-router";
+import { syncHistoryWithStore } from "react-router-redux";
+import Root from "./containers/Root";
+import configureStore from "./store/store";
+
 import "./index.css";
-import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+const store = configureStore();
+const history = syncHistoryWithStore(browserHistory, store);
+
+ReactDOM.render(
+  <Root store={store} history={history}/>,
+  document.getElementById("root")
+);
+
 registerServiceWorker();
