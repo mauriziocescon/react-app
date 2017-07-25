@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Users.css";
 
-class UserPage extends React.Component {
+class Users extends React.Component {
 
   render() {
     return (
@@ -11,4 +11,6 @@ class UserPage extends React.Component {
   }
 }
 
-UserPage.propTypes = {};
+Users.propTypes = {};
+
+export default Users;
