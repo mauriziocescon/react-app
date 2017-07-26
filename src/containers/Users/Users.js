@@ -11,6 +11,4 @@ class Users extends React.Component {
   }
 }
 
-Users.propTypes = {};
-
 export default Users;
