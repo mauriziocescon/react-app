@@ -1,25 +1,24 @@
-import React from "react";
-// import logo from "./logo.svg";
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 import "./App.css";
 
-import { Link } from "react-router";
+import NavigationBar from "../../components/NavigationBar";
 
-
-class App extends React.Component {
+class App extends Component {
   render() {
     return (
       <div className="App">
-        <div>
-          <Link to="/">Home</Link>
+        <NavigationBar/>
+        <div className="App-main-content">
+          {this.props.children}
         </div>
-        <div>
-          <Link to="/users">Users</Link>
-        </div>
-
-        {this.props.children}
       </div>
     );
   }
 }
+
+App.propTypes = {
+  children: PropTypes.object.isRequired
+};
 
 export default App;
