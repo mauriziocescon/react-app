@@ -4,11 +4,12 @@ import { browserHistory } from "react-router";
 import { syncHistoryWithStore } from "react-router-redux";
 import Root from "./containers/Root";
 import configureStore from "./store/configureStore";
+import configureLocale from "./i18n/configureLocale";
 
 import "./index.css";
 import registerServiceWorker from "./registerServiceWorker";
 
-const store = configureStore();
+const store = configureStore(configureLocale());
 const history = syncHistoryWithStore(browserHistory, store);
 
 ReactDOM.render(

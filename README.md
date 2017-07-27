@@ -5,12 +5,15 @@ Application currently in alpha
 
 ## Development server
 
-Run `npm run start` for a dev server. Navigate to `http://localhost:3000/`. The app will automatically reload if you change any of the source files.
+1. Download the following extensions [react-devtools](https://github.com/facebook/react-devtools) 
+and [redux-devtools](https://github.com/zalmoxisus/redux-devtools-extension) for your browser  
+
+2. Run `npm run start` for a dev server. Navigate to `http://localhost:3000/`. The app will automatically reload if you change any of the source files.
 
 ## Build
 
-Run `npm run build` to build the project. The build artifacts will be stored in the `build/` directory.
+1. Run `npm run build` to build the project. The build artifacts will be stored in the `build/` directory.
 
 ## Running unit tests
 
-Run `npm run test` to execute the unit tests.
+1. Run `npm run test` to execute the unit tests.
