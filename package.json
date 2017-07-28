@@ -18,6 +18,7 @@
   "dependencies": {
     "prop-types": "15.5.10",
     "react": "15.6.1",
+    "react-bootstrap": "0.31.1",
     "react-dom": "15.6.1",
     "react-intl": "2.3.0",
     "react-intl-redux": "0.6.0",
