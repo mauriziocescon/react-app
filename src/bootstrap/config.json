@@ -147,7 +147,7 @@
     "@navbar-padding-vertical": "((@navbar-height - @line-height-computed) / 2)",
     "@navbar-collapse-max-height": "340px",
     "@navbar-default-color": "#777",
-    "@navbar-default-bg": "#f8f8f8",
+    "@navbar-default-bg": "#333",
     "@navbar-default-border": "darken(@navbar-default-bg, 6.5%)",
     "@navbar-default-link-color": "#fff",
     "@navbar-default-link-hover-color": "#fff",
@@ -418,5 +418,5 @@
     "carousel.less"
   ],
   "js": [],
-  "customizerUrl": "http://getbootstrap.com/customize/?id=79d5a49c8fb6bb31cd2d8bbc53b8e6aa"
+  "customizerUrl": "http://getbootstrap.com/customize/?id=3ea6033047f4e2f12be6e293a40627b9"
 }

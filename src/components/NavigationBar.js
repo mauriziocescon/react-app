@@ -7,7 +7,7 @@ import "./NavigationBar.css";
 class NavigationBar extends Component {
   render() {
     return (
-      <Navbar fluid fixedTop inverse collapseOnSelect>
+      <Navbar fluid fixedTop default collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
             <a>
@@ -22,7 +22,7 @@ class NavigationBar extends Component {
         <Navbar.Collapse>
           <Nav>
             <NavItem eventKey={2} href="#">
-              <Link to="albums" activeClassName="active">
+              <Link to="albums" activeClassName="active" className="NavigatorBarLink">
                 <FormattedMessage
                   id="navigationbar.albums"
                   defaultMessage="Albums"
@@ -30,7 +30,7 @@ class NavigationBar extends Component {
               </Link>
             </NavItem>
             <NavItem eventKey={3} href="#">
-              <Link to="users" activeClassName="active">
+              <Link to="users" activeClassName="active" className="NavigatorBarLink">
                 <FormattedMessage
                   id="navigationbar.users"
                   defaultMessage="Users"

@@ -5,8 +5,8 @@
  */
 
 /*!
- * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=79d5a49c8fb6bb31cd2d8bbc53b8e6aa)
- * Config saved to config.json and https://gist.github.com/79d5a49c8fb6bb31cd2d8bbc53b8e6aa
+ * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=3ea6033047f4e2f12be6e293a40627b9)
+ * Config saved to config.json and https://gist.github.com/3ea6033047f4e2f12be6e293a40627b9
  */
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
@@ -4499,8 +4499,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default {
-  background-color: #f8f8f8;
-  border-color: #e7e7e7;
+  background-color: #333333;
+  border-color: #222222;
 }
 .navbar-default .navbar-brand {
   color: #ffffff;
@@ -4545,7 +4545,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-  border-color: #e7e7e7;
+  border-color: #222222;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
