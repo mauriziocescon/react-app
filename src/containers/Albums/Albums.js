@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import { FormattedMessage, FormattedNumber } from "react-intl";
 import { Button } from "react-bootstrap";
 
-import "./Users.css";
+import "./Albums.css";
 
-class Users extends Component {
+class Albums extends Component {
 
   render() {
     return (
-      <div className="container-fluid Users">
+      <div className="container-fluid Albums">
         <div className="row">
           <div className="col-xs-12">
             <div>
@@ -16,24 +16,9 @@ class Users extends Component {
                 <FormattedNumber value={1000}/>
               </div>
               <div>
-                <FormattedMessage
-                  id="users.example"
-                  defaultMessage="default message"
-                />
-              </div>
-              <div>
-                <FormattedMessage
-                  id="users.example2"
-                  defaultMessage="default message"
-                  values={{
-                    value: "message to pass"
-                  }}
-                />
-              </div>
-              <div>
                 <Button bsStyle="primary">
                   <FormattedMessage
-                    id="users.example"
+                    id="albums.example"
                     defaultMessage="default message"
                   />
                 </Button>
@@ -46,4 +31,4 @@ class Users extends Component {
   }
 }
 
-export default Users;
+export default Albums;

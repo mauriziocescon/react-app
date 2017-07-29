@@ -7,6 +7,7 @@ import configureStore from "./store/configureStore";
 import configureLocale from "./i18n/configureLocale";
 
 import "./index.css";
+import "./bootstrap/css/bootstrap.css";
 import registerServiceWorker from "./registerServiceWorker";
 
 const store = configureStore(configureLocale());

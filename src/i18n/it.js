@@ -1,8 +1,12 @@
 const itConfig = {
   locale: "it",
   messages: {
-    "app.welcome": "Benvenuto",
-    "app.greeting-message": "Ciao {name}, come va?"
+    "albums.example": "Esempio albums",
+    "navigationbar.albums": "Albums",
+    "navigationbar.title": "Demo",
+    "navigationbar.users": "Users",
+    "users.example": "Esempio",
+    "users.example2": "Esempio con {value}",
   }
 };
 

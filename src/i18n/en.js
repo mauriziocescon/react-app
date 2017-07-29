@@ -1,8 +1,12 @@
 const enConfig = {
   locale: "it",
   messages: {
-    "app.welcome": "Welcome",
-    "app.greeting-message": "Hello {name}, how are you?"
+    "albums.example": "Albums example",
+    "navigationbar.albums": "Albums",
+    "navigationbar.title": "Demo",
+    "navigationbar.users": "Users",
+    "users.example": "Example",
+    "users.example2": "Example with {value}",
   }
 };
 
