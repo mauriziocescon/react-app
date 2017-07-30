@@ -1,11 +1,11 @@
 import { updateIntl } from "react-intl-redux";
-import { getMessagesForLanguage } from "../i18n/configureLocale";
+import { getConfigForLanguage } from "../i18n/configureLocale";
 
 export const changeLanguage = (language) => (dispatch, getState) => {
-  const messages = getMessagesForLanguage(language);
+  const config = getConfigForLanguage(language);
 
   dispatch(updateIntl({
-    locale: language,
-    messages: messages
+    locale: config.locale,
+    messages: config.messages
   }));
 };

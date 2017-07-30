@@ -5,12 +5,12 @@ import it from "react-intl/locale-data/it";
 import enConfig from "./en";
 import itConfig from "./it";
 
-export const getMessagesForLanguage = language => {
+export const getConfigForLanguage = language => {
   switch (language) {
     case "it":
-      return itConfig.messages;
+      return itConfig;
     default:
-      return enConfig.messages;
+      return enConfig;
   }
 };
 
