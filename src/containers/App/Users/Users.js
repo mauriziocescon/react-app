@@ -28,7 +28,7 @@ class Users extends Component {
                   id="users.example2"
                   defaultMessage="default message"
                   values={{
-                    value: "message to pass"
+                    value: "passed message"
                   }}
                 />
               </div>
