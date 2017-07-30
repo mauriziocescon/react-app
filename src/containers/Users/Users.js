@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 import { FormattedMessage, FormattedNumber } from "react-intl";
 import { Button } from "react-bootstrap";
 
@@ -46,4 +48,13 @@ class Users extends Component {
   }
 }
 
-export default Users;
+Users.propTypes = {
+};
+
+const mapStateToProps = (state, ownProps) => ({
+
+});
+
+export default connect(mapStateToProps
+
+)(Users);

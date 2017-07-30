@@ -5,6 +5,15 @@ import it from "react-intl/locale-data/it";
 import enConfig from "./en";
 import itConfig from "./it";
 
+export const getMessagesForLanguage = language => {
+  switch (language) {
+    case "it":
+      return itConfig;
+    default:
+      return enConfig;
+  }
+};
+
 const configureLocale = preloadedState => {
 
   addLocaleData([...en, ...it]);

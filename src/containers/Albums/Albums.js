@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 import { FormattedMessage, FormattedNumber } from "react-intl";
 import { Button } from "react-bootstrap";
 
@@ -31,4 +33,13 @@ class Albums extends Component {
   }
 }
 
-export default Albums;
+Albums.propTypes = {
+};
+
+const mapStateToProps = (state, ownProps) => ({
+
+});
+
+export default connect(mapStateToProps
+
+)(Albums);
