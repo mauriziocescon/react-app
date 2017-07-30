@@ -51,9 +51,9 @@ class Users extends Component {
 Users.propTypes = {
 };
 
-const mapStateToProps = (state, ownProps) => ({
-
-});
+const mapStateToProps = (state, ownProps) => {
+  return {};
+};
 
 export default connect(mapStateToProps
 

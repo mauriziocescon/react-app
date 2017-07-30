@@ -36,9 +36,9 @@ class Albums extends Component {
 Albums.propTypes = {
 };
 
-const mapStateToProps = (state, ownProps) => ({
-
-});
+const mapStateToProps = (state, ownProps) => {
+  return {};
+};
 
 export default connect(mapStateToProps
 

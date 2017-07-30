@@ -1,5 +1,5 @@
 const enConfig = {
-  locale: "it",
+  locale: "en",
   messages: {
     "albums.example": "Albums example",
     "navigationbar.albums": "Albums",

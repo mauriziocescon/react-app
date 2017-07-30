@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
+import { defaultLanguage, availableLanguages } from "../../i18n/configureLocale";
 import "./App.css";
 
 import NavigationBar from "../../components/NavigationBar";
@@ -10,13 +11,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.handleLanguageChange = this.handleLanguageChange.bind(this);
-
-    // todo: move values in some constants
-    this.selectedLanguage = "en";
-    this.availableLanguages = ["en", "it"];
-
-    // creates a FormattedMessage
-    // this.dropdownTitle = <FormattedMessage id={this.props.selectedLanguage} defaultMessage="Languages"/>;
+    this.selectedLanguage = this.props.selectedLanguage || defaultLanguage;
+    this.availableLanguages = availableLanguages;
   }
 
   handleLanguageChange(eventKey, event) {
@@ -41,12 +37,15 @@ class App extends Component {
 
 App.propTypes = {
   children: PropTypes.object.isRequired,
+  selectedLanguage: PropTypes.string.isRequired,
   changeLanguage: PropTypes.func.isRequired
 };
 
-const mapStateToProps = (state, ownProps) => ({
-
-});
+const mapStateToProps = (state, ownProps) => {
+  return {
+    selectedLanguage: state.intl.locale
+  };
+};
 
 export default connect(mapStateToProps, {
   changeLanguage
