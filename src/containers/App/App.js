@@ -23,10 +23,7 @@ class App extends Component {
     // this.dropdownTitle = <FormattedMessage id={this.props.selectedLanguage} defaultMessage="Languages"/>;
 
     // call the store
-    if (this.props.changeLanguage) {
-      console.log("Funziona!");
-      this.props.changeLanguage(eventKey);
-    }
+    this.props.changeLanguage(eventKey);
   }
 
   render() {

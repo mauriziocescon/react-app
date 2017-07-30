@@ -8,9 +8,9 @@ import itConfig from "./it";
 export const getMessagesForLanguage = language => {
   switch (language) {
     case "it":
-      return itConfig;
+      return itConfig.messages;
     default:
-      return enConfig;
+      return enConfig.messages;
   }
 };
 
