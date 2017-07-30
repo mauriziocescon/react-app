@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { defaultLanguage, availableLanguages } from "../../i18n/configureLocale";
 import "./App.css";
 
-import NavigationBar from "../../components/NavigationBar";
+import NavigationBar from "../../components/NavigationBar/NavigationBar";
 import { changeLanguage } from "../../actions";
 
 class App extends Component {
