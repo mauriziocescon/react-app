@@ -5,7 +5,7 @@ export const changeLanguage = (language) => (dispatch, getState) => {
   const messages = getMessagesForLanguage(language);
 
   dispatch(updateIntl({
-    language,
-    messages
+    locale: language,
+    messages: messages
   }));
 };

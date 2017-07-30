@@ -14,14 +14,12 @@ class App extends Component {
     // todo: move values in some constants
     this.selectedLanguage = "en";
     this.availableLanguages = ["en", "it"];
-  }
-
-  handleLanguageChange(eventKey, event) {
-    console.log(eventKey, event);
 
     // creates a FormattedMessage
     // this.dropdownTitle = <FormattedMessage id={this.props.selectedLanguage} defaultMessage="Languages"/>;
+  }
 
+  handleLanguageChange(eventKey, event) {
     // call the store
     this.props.changeLanguage(eventKey);
   }
