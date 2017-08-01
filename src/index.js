@@ -8,6 +8,7 @@ import configureLocale from "./i18n/configureLocale";
 
 import "./index.css";
 import "./bootstrap/css/bootstrap.css";
+import "font-awesome/css/font-awesome.css";
 import registerServiceWorker from "./registerServiceWorker";
 
 const store = configureStore(configureLocale());

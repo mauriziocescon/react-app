@@ -7,6 +7,7 @@ import { Grid, Row, Col, Button } from "react-bootstrap";
 import "./Albums.css";
 
 class Albums extends Component {
+
   render() {
     return (
       <Grid fluid className="Albums">

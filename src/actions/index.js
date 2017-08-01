@@ -9,3 +9,12 @@ export const changeLanguage = (language) => (dispatch, getState) => {
     messages: config.messages
   }));
 };
+
+export const USER_TEXT_SEARCH = "USER_TEXT_SEARCH";
+
+export const changeUserTextSearch = (textSearch) => {
+  return {
+    type: USER_TEXT_SEARCH,
+    userTextSearch: textSearch
+  };
+};

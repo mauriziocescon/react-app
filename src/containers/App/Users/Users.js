@@ -6,10 +6,32 @@ import { Grid, Row, Col, Button } from "react-bootstrap";
 
 import "./Users.css";
 
+import TextSearch from "../../../components/TextSearch/TextSearch";
+import { changeUserTextSearch } from "../../../actions";
+
 class Users extends Component {
+
+  constructor(props) {
+    super(props);
+    this.handleTextSearchChange = this.handleTextSearchChange.bind(this);
+    this.textSearch = this.props.textSearch || "";
+  }
+
+  handleTextSearchChange(textSearch) {
+    // call the store
+    this.props.changeUserTextSearch(textSearch);
+  }
+
   render() {
     return (
       <Grid fluid className="Albums">
+        <TextSearch
+          textSearch={this.textSearch}
+          onTextSearchChange={this.handleTextSearchChange}
+        />
+
+
+
         <Row>
           <Col xs={12}>
             <FormattedNumber value={1000}/>
@@ -44,12 +66,18 @@ class Users extends Component {
 }
 
 Users.propTypes = {
+  textSearch: PropTypes.string.isRequired,
+  changeUserTextSearch: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state, ownProps) => {
-  return {};
+  const { users } = state;
+
+  return {
+    textSearch: users.userTextSearch
+  };
 };
 
-export default connect(mapStateToProps
-
-)(Users);
+export default connect(mapStateToProps, {
+  changeUserTextSearch
+})(Users);

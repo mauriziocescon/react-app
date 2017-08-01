@@ -2,12 +2,14 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { defaultLanguage, availableLanguages } from "../../i18n/configureLocale";
+
 import "./App.css";
 
 import NavigationBar from "../../components/NavigationBar/NavigationBar";
 import { changeLanguage } from "../../actions";
 
 class App extends Component {
+
   constructor(props) {
     super(props);
     this.handleLanguageChange = this.handleLanguageChange.bind(this);
@@ -26,7 +28,8 @@ class App extends Component {
         <NavigationBar
           selectedLanguage={this.selectedLanguage}
           availableLanguages={this.availableLanguages}
-          onLanguageChange={this.handleLanguageChange}/>
+          onLanguageChange={this.handleLanguageChange}
+        />
         <div className="App-main-content">
           {this.props.children}
         </div>

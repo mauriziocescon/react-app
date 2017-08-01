@@ -7,6 +7,7 @@ const enConfig = {
     "navigationbar.users": "Users",
     "users.example": "Example",
     "users.example2": "Example with {value}",
+    "users.textPlaceholder": "Type some text",
   }
 };
 

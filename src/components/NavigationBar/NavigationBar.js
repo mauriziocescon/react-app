@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router";
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from "react-bootstrap";
 import { FormattedMessage } from "react-intl";
+
 import "./NavigationBar.css";
 
 class NavigationBar extends Component {

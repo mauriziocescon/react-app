@@ -7,6 +7,7 @@ const itConfig = {
     "navigationbar.users": "Users",
     "users.example": "Esempio",
     "users.example2": "Esempio con {value}",
+    "users.textPlaceholder": "Inserisci testo",
   }
 };
 
