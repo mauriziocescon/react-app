@@ -11,13 +11,13 @@ class TextSearch extends Component {
   constructor(props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
-    this.textSearch = this.props.textSearch;
+    this.value = this.props.value;
     this.searchPlaceholder = this.props.intl.formatMessage({id: "users.textPlaceholder", defaultMessage: "Insert text"});
   }
 
   handleChange(event) {
-    this.textSearch = event.target.value;
-    this.props.onTextSearchChange(this.textSearch);
+    this.value = event.target.value;
+    this.props.onTextSearchChange(this.value);
   }
 
   render() {
@@ -28,7 +28,7 @@ class TextSearch extends Component {
             <InputGroup>
               <FormControl
                 type="search"
-                defaultValue={this.textSearch}
+                value={this.value}
                 onChange={this.handleChange}
                 placeholder={this.searchPlaceholder}
               />
@@ -44,7 +44,7 @@ class TextSearch extends Component {
 }
 
 TextSearch.propTypes = {
-  textSearch: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
   onTextSearchChange: PropTypes.func.isRequired,
   intl: intlShape.isRequired
 };

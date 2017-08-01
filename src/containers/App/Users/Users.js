@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { FormattedMessage, FormattedNumber } from "react-intl";
-import { Grid, Row, Col, Button } from "react-bootstrap";
+import { Grid } from "react-bootstrap";
 
 import "./Users.css";
 
@@ -18,6 +18,8 @@ class Users extends Component {
   }
 
   handleTextSearchChange(textSearch) {
+    this.textSearch = textSearch;
+
     // call the store
     this.props.changeUserTextSearch(textSearch);
   }
@@ -26,7 +28,7 @@ class Users extends Component {
     return (
       <Grid fluid className="Albums">
         <TextSearch
-          textSearch={this.textSearch}
+          value={this.textSearch}
           onTextSearchChange={this.handleTextSearchChange}
         />
       </Grid>
