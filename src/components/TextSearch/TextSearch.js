@@ -16,7 +16,7 @@ class TextSearch extends Component {
   }
 
   handleChange(event) {
-    this.value = event.target.value.toUpperCase();
+    this.value = event.target.value;
     this.props.onValueChange(this.value);
   }
 
