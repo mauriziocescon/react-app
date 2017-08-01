@@ -17,11 +17,11 @@ class Users extends Component {
     this.textSearch = this.props.textSearch || "";
   }
 
-  handleTextSearchChange(textSearch) {
-    this.textSearch = textSearch;
+  handleTextSearchChange(value) {
+    this.textSearch = value;
 
     // call the store
-    this.props.changeUserTextSearch(textSearch);
+    this.props.changeUserTextSearch(this.textSearch);
   }
 
   render() {
@@ -29,7 +29,7 @@ class Users extends Component {
       <Grid fluid className="Albums">
         <TextSearch
           value={this.textSearch}
-          onTextSearchChange={this.handleTextSearchChange}
+          onValueChange={this.handleTextSearchChange}
         />
       </Grid>
     );

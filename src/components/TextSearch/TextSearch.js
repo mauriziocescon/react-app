@@ -12,12 +12,12 @@ class TextSearch extends Component {
     super(props);
     this.handleChange = this.handleChange.bind(this);
     this.value = this.props.value;
-    this.searchPlaceholder = this.props.intl.formatMessage({id: "users.textPlaceholder", defaultMessage: "Insert text"});
+    this.searchPlaceholder = this.props.intl.formatMessage({id: "app.textPlaceholder", defaultMessage: "Insert text"});
   }
 
   handleChange(event) {
-    this.value = event.target.value;
-    this.props.onTextSearchChange(this.value);
+    this.value = event.target.value.toUpperCase();
+    this.props.onValueChange(this.value);
   }
 
   render() {
@@ -45,7 +45,7 @@ class TextSearch extends Component {
 
 TextSearch.propTypes = {
   value: PropTypes.string.isRequired,
-  onTextSearchChange: PropTypes.func.isRequired,
+  onValueChange: PropTypes.func.isRequired,
   intl: intlShape.isRequired
 };
 
