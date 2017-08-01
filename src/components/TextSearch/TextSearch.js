@@ -15,8 +15,8 @@ class TextSearch extends Component {
     this.searchPlaceholder = this.props.intl.formatMessage({id: "users.textPlaceholder", defaultMessage: "Insert text"});
   }
 
-  handleChange(e) {
-    this.textSearch = e.target.value;
+  handleChange(event) {
+    this.textSearch = event.target.value;
     this.props.onTextSearchChange(this.textSearch);
   }
 
