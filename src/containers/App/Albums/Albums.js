@@ -16,6 +16,21 @@ class Albums extends Component {
             <FormattedNumber value={1000}/>
           </Col>
           <Col xs={12}>
+            <FormattedMessage
+              id="albums.example"
+              defaultMessage="default message"
+            />
+          </Col>
+          <Col xs={12}>
+            <FormattedMessage
+              id="albums.example2"
+              defaultMessage="default message"
+              values={{
+                value: "passed message"
+              }}
+            />
+          </Col>
+          <Col xs={12}>
             <Button bsStyle="primary">
               <FormattedMessage
                 id="albums.example"

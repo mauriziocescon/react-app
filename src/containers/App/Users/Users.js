@@ -29,37 +29,6 @@ class Users extends Component {
           textSearch={this.textSearch}
           onTextSearchChange={this.handleTextSearchChange}
         />
-
-
-
-        <Row>
-          <Col xs={12}>
-            <FormattedNumber value={1000}/>
-          </Col>
-          <Col xs={12}>
-            <FormattedMessage
-              id="users.example"
-              defaultMessage="default message"
-            />
-          </Col>
-          <Col xs={12}>
-            <FormattedMessage
-              id="users.example2"
-              defaultMessage="default message"
-              values={{
-                value: "passed message"
-              }}
-            />
-          </Col>
-          <Col xs={12}>
-            <Button bsStyle="primary">
-              <FormattedMessage
-                id="albums.example"
-                defaultMessage="default message"
-              />
-            </Button>
-          </Col>
-        </Row>
       </Grid>
     );
   }
