@@ -13,16 +13,6 @@ class NavigationBar extends Component {
     this.handleSelect = this.handleSelect.bind(this);
     this.dropdownTitle = this.props.selectedLanguage;
     this.languages = this.props.availableLanguages;
-
-    this.createLanguagesItems();
-  }
-
-  createLanguagesItems() {
-    this.languagesItems = this.languages.map((language) => {
-      return (
-        <MenuItem key={language} eventKey={language}>{language}</MenuItem>
-      )
-    });
   }
 
   handleSelect(eventKey, event) {
@@ -30,6 +20,12 @@ class NavigationBar extends Component {
   }
 
   render() {
+    const languagesItems = this.languages.map((language) => {
+      return (
+        <MenuItem key={language} eventKey={language}>{language}</MenuItem>
+      )
+    });
+
     return (
       <Navbar fluid fixedTop default collapseOnSelect>
         <Navbar.Header>
@@ -63,8 +59,8 @@ class NavigationBar extends Component {
             </NavItem>
           </Nav>
           <Nav pullRight>
-            <NavDropdown eventKey={3} title={this.dropdownTitle} onSelect={this.handleSelect} id="basic-nav-dropdown">
-              {this.languagesItems}
+            <NavDropdown id="language-nav-dropdown" eventKey={3} title={this.dropdownTitle} onSelect={this.handleSelect}>
+              {languagesItems}
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
