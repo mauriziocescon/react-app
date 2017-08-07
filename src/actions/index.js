@@ -1,20 +1,9 @@
-import { updateIntl } from "react-intl-redux";
-import { getConfigForLanguage } from "../i18n/configureLocale";
+import { changeLanguage } from "./language";
+import { FETCH_USERS_REQUESTED, requestUsers } from "./users";
+import { FETCH_USERS_SUCCEEDED, receiveUsers } from "./users";
+import { FETCH_USERS_FAILED, usersFailure } from "./users";
 
-export const changeLanguage = (language) => (dispatch, getState) => {
-  const config = getConfigForLanguage(language);
-
-  dispatch(updateIntl({
-    locale: config.locale,
-    messages: config.messages
-  }));
-};
-
-export const USER_TEXT_SEARCH = "USER_TEXT_SEARCH";
-
-export const changeUserTextSearch = (textSearch) => {
-  return {
-    type: USER_TEXT_SEARCH,
-    userTextSearch: textSearch
-  };
-};
+export { changeLanguage };
+export { FETCH_USERS_REQUESTED, requestUsers };
+export { FETCH_USERS_SUCCEEDED, receiveUsers };
+export { FETCH_USERS_FAILED, usersFailure };

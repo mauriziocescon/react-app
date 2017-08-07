@@ -1,4 +1,4 @@
-import { USER_TEXT_SEARCH } from "../actions";
+import { FETCH_USERS_REQUESTED } from "../actions";
 
 const userInitialState = {
   userTextSearch: ""
@@ -6,7 +6,7 @@ const userInitialState = {
 
 const users = (state = userInitialState, action) => {
   switch (action.type) {
-    case USER_TEXT_SEARCH:
+    case FETCH_USERS_REQUESTED:
       return {
         ...state,
         userTextSearch: action.userTextSearch

@@ -8,7 +8,7 @@ import "./Users.css";
 
 import TextSearch from "../../../components/TextSearch/TextSearch";
 import UserRow from "../../../components/UserRow/UserRow";
-import { changeUserTextSearch } from "../../../actions";
+import { requestUsers } from "../../../actions";
 
 class Users extends Component {
 
@@ -25,7 +25,7 @@ class Users extends Component {
     this.textSearch = value;
 
     // call the store
-    this.props.changeUserTextSearch(this.textSearch);
+    this.props.requestUsers(this.textSearch);
   }
 
   handleRowClick(event) {
@@ -55,7 +55,7 @@ class Users extends Component {
 
 Users.propTypes = {
   textSearch: PropTypes.string.isRequired,
-  changeUserTextSearch: PropTypes.func.isRequired
+  requestUsers: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state, ownProps) => {
@@ -67,5 +67,5 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 export default connect(mapStateToProps, {
-  changeUserTextSearch
+  requestUsers
 })(Users);

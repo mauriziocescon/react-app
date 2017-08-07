@@ -1,3 +1,4 @@
+// URLs
 export const fetchAlbumsUrl = "http://jsonplaceholder.typicode.com/albums";
 export const fetchCommentsUrl = "http://jsonplaceholder.typicode.com/comments";
 export const fetchPhotosUrl = "http://jsonplaceholder.typicode.com/photos";
