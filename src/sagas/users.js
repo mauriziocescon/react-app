@@ -4,7 +4,7 @@ import { FETCH_USERS_REQUESTED, receiveUsers, usersFailure } from "../actions";
 
 export function* fetchUsers(action) {
   try {
-    const data = yield call(fetchUsersUrl, action.payload.url);
+    const data = yield call(fetch, fetchUsersUrl);
     yield put(receiveUsers(data));
   } catch (error) {
     yield put(usersFailure(error));
