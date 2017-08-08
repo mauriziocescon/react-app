@@ -21,7 +21,7 @@ class UserRow extends Component {
     return (
       <Row>
         <Col className="UserRow" xs={12} onClick={this.handleClick}>
-          {this.user.id}
+          {JSON.stringify(this.user)}
         </Col>
       </Row>
     );

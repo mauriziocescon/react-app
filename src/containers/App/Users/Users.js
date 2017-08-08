@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { FormattedMessage, FormattedNumber } from "react-intl";
+import { FormattedMessage } from "react-intl";
 import { Grid } from "react-bootstrap";
 
 import "./Users.css";
@@ -18,7 +18,8 @@ class Users extends Component {
     this.handleRowClick = this.handleRowClick.bind(this);
     this.textSearch = this.props.textSearch || "";
 
-    this.users = [{id: "1"}, {id: "2"}, {id: "3"}, {id: "4"}];
+    // call the store
+    this.props.requestUsers(this.textSearch);
   }
 
   handleTextSearchChange(value) {
@@ -35,7 +36,8 @@ class Users extends Component {
   }
 
   render() {
-    const userRows = this.users.map((user) => {
+    const users = this.props.users || [];
+    const userRows = users.map((user) => {
       return (
         <UserRow key={user.id} user={user} onRowClick={this.handleRowClick}/>
       );
@@ -48,6 +50,13 @@ class Users extends Component {
           onValueChange={this.handleTextSearchChange}
         />
         {userRows}
+
+        <div className="UsersBusy">
+          <FormattedMessage
+            id="app.busy"
+            defaultMessage="Loading..."
+          />
+        </div>
       </Grid>
     );
   }
@@ -55,14 +64,16 @@ class Users extends Component {
 
 Users.propTypes = {
   textSearch: PropTypes.string.isRequired,
-  requestUsers: PropTypes.func.isRequired
+  users: PropTypes.array,
+  requestUsers: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state, ownProps) => {
-  const {users} = state;
+  const { users } = state;
 
   return {
-    textSearch: users.userTextSearch
+    textSearch: users.userTextSearch,
+    users: users.users
   };
 };
 
