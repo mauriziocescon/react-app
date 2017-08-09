@@ -37,11 +37,17 @@ class Users extends Component {
 
   render() {
     const users = this.props.users || [];
-    const userRows = users.map((user) => {
-      return (
-        <UserRow key={user.id} user={user} onRowClick={this.handleRowClick}/>
-      );
-    });
+    let busyMessage, userRows;
+    if (this.props.busy) {
+      busyMessage = <FormattedMessage id="app.busy" defaultMessage="Loading..."/>;
+    }
+    else {
+      userRows = users.map((user) => {
+        return (
+          <UserRow key={user.id} user={user} onRowClick={this.handleRowClick}/>
+        );
+      });
+    }
 
     return (
       <Grid fluid className="Albums">
@@ -52,10 +58,7 @@ class Users extends Component {
         {userRows}
 
         <div className="UsersBusy">
-          <FormattedMessage
-            id="app.busy"
-            defaultMessage="Loading..."
-          />
+          {busyMessage}
         </div>
       </Grid>
     );
@@ -64,6 +67,7 @@ class Users extends Component {
 
 Users.propTypes = {
   textSearch: PropTypes.string.isRequired,
+  busy: PropTypes.bool.isRequired,
   users: PropTypes.array,
   requestUsers: PropTypes.func.isRequired,
 };
@@ -73,6 +77,7 @@ const mapStateToProps = (state, ownProps) => {
 
   return {
     textSearch: users.userTextSearch,
+    busy: users.busy,
     users: users.users
   };
 };
