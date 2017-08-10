@@ -1,8 +1,8 @@
 const itConfig = {
   locale: "it",
   messages: {
-    "albums.example": "Esempio albums",
-    "albums.example2": "Esempio con {value}",
+    "albums.example": "Esempio con {value}",
+    "app.busy": "Caricamento...",
     "navigationbar.albums": "Albums",
     "navigationbar.title": "Demo",
     "navigationbar.users": "Users",

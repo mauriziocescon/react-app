@@ -39,7 +39,7 @@ class Users extends Component {
     const users = this.props.users || [];
     let busyMessage, userRows;
     if (this.props.busy) {
-      busyMessage = <FormattedMessage id="app.busy" defaultMessage="Loading..."/>;
+      busyMessage = <FormattedMessage id="app.busy" defaultMessage="Loading"/>;
     }
     else {
       userRows = users.map((user) => {

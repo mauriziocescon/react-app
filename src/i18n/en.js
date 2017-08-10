@@ -1,8 +1,8 @@
 const enConfig = {
   locale: "en",
   messages: {
-    "albums.example": "Albums example",
-    "albums.example2": "Example with {value}",
+    "albums.example": "Example with {value}",
+    "app.busy": "Loading...",
     "navigationbar.albums": "Albums",
     "navigationbar.title": "Demo",
     "navigationbar.users": "Users",
