@@ -6,6 +6,7 @@ import { Grid } from "react-bootstrap";
 
 import "./Users.css";
 
+import Loading from "../../../components/Loading/Loading";
 import TextSearch from "../../../components/TextSearch/TextSearch";
 import UserRow from "../../../components/UserRow/UserRow";
 import { requestUsers } from "../../../actions";
@@ -37,12 +38,12 @@ class Users extends Component {
 
   render() {
     const users = this.props.users || [];
-    let busyMessage, userRows;
+    let content;
     if (this.props.busy) {
-      busyMessage = <FormattedMessage id="app.busy" defaultMessage="Loading"/>;
+      content = <Loading />;
     }
     else {
-      userRows = users.map((user) => {
+      content = users.map((user) => {
         return (
           <UserRow key={user.id} user={user} onRowClick={this.handleRowClick}/>
         );
@@ -55,11 +56,7 @@ class Users extends Component {
           value={this.textSearch}
           onValueChange={this.handleTextSearchChange}
         />
-        {userRows}
-
-        <div className="UsersBusy">
-          {busyMessage}
-        </div>
+        {content}
       </Grid>
     );
   }

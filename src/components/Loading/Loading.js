@@ -16,10 +16,12 @@ class Loading extends Component {
     return (
       <Row>
         <Col xs={12}>
-          <FormattedMessage
-            id="navigationbar.albums"
-            defaultMessage="Albums"
-          />
+          <h3 className="FullWidthMessage">
+            <FormattedMessage
+              id="loading.busy"
+              defaultMessage="Loading"
+            />
+          </h3>
         </Col>
       </Row>
     );
@@ -27,8 +29,6 @@ class Loading extends Component {
 }
 
 Loading.propTypes = {
-  value: PropTypes.string.isRequired,
-  onValueChange: PropTypes.func.isRequired,
   intl: intlShape.isRequired
 };
 
