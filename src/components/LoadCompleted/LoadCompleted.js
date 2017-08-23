@@ -4,9 +4,9 @@ import { injectIntl, intlShape } from "react-intl";
 import { Row, Col } from "react-bootstrap";
 import { FormattedMessage } from "react-intl";
 
-import "./Loading.css";
+import "./LoadCompleted.css";
 
-class Loading extends Component {
+class LoadCompleted extends Component {
 
   constructor(props) {
     super(props);
@@ -16,10 +16,10 @@ class Loading extends Component {
     return (
       <Row>
         <Col xs={12}>
-          <h3 className="LoadingMessage">
+          <h3 className="LoadCompletedMessage">
             <FormattedMessage
-              id="loading.message"
-              defaultMessage="Loading"
+              id="load-completed.message"
+              defaultMessage="Load completed"
             />
           </h3>
         </Col>
@@ -28,8 +28,8 @@ class Loading extends Component {
   }
 }
 
-Loading.propTypes = {
+LoadCompleted.propTypes = {
   intl: intlShape.isRequired
 };
 
-export default injectIntl(Loading);
+export default injectIntl(LoadCompleted);

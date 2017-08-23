@@ -4,22 +4,27 @@ import { injectIntl, intlShape } from "react-intl";
 import { Row, Col } from "react-bootstrap";
 import { FormattedMessage } from "react-intl";
 
-import "./Loading.css";
+import "./Retry.css";
 
-class Loading extends Component {
+class Retry extends Component {
 
   constructor(props) {
     super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(event) {
+    this.props.onRetryClick(event);
   }
 
   render() {
     return (
       <Row>
         <Col xs={12}>
-          <h3 className="LoadingMessage">
+          <h3 className="RetryMessage" onClick={this.handleClick}>
             <FormattedMessage
-              id="loading.message"
-              defaultMessage="Loading"
+              id="retry.message"
+              defaultMessage="Retry"
             />
           </h3>
         </Col>
@@ -28,8 +33,9 @@ class Loading extends Component {
   }
 }
 
-Loading.propTypes = {
+Retry.propTypes = {
+  onRetryClick: PropTypes.func.isRequired,
   intl: intlShape.isRequired
 };
 
-export default injectIntl(Loading);
+export default injectIntl(Retry);

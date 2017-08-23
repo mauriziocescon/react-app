@@ -32,7 +32,7 @@ class NavigationBar extends Component {
           <Navbar.Brand>
             <a>
               <FormattedMessage
-                id="navigationbar.title"
+                id="navigation-bar.title"
                 defaultMessage="Title"
               />
             </a>
@@ -44,7 +44,7 @@ class NavigationBar extends Component {
             <NavItem eventKey={1} href="#">
               <Link to="albums" activeClassName="active" className="NavigatorBarLink">
                 <FormattedMessage
-                  id="navigationbar.albums"
+                  id="navigation-bar.albums"
                   defaultMessage="Albums"
                 />
               </Link>
@@ -52,7 +52,7 @@ class NavigationBar extends Component {
             <NavItem eventKey={2} href="#">
               <Link to="users" activeClassName="active" className="NavigatorBarLink">
                 <FormattedMessage
-                  id="navigationbar.users"
+                  id="navigation-bar.users"
                   defaultMessage="Users"
                 />
               </Link>
