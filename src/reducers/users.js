@@ -2,7 +2,7 @@ import { FETCH_USERS_REQUESTED, FETCH_USERS_SUCCEEDED, FETCH_USERS_FAILED } from
 
 const userInitialState = {
   userTextSearch: "",
-  busy: false,
+  isFetching: false,
   users: null,
   usersFailureError: null
 };
@@ -13,19 +13,19 @@ const users = (state = userInitialState, action) => {
       return {
         ...state,
         userTextSearch: action.userTextSearch,
-        busy: true
+        isFetching: true
       };
     case FETCH_USERS_SUCCEEDED:
       return {
         ...state,
         users: action.users,
-        busy: false
+        isFetching: false
       };
     case FETCH_USERS_FAILED:
       return {
         ...state,
         usersFailureError: action.usersFailureError,
-        busy: false
+        isFetching: false
       };
     default:
       return state;

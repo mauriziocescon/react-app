@@ -21,8 +21,10 @@ class Users extends Component {
     this.handleRowClick = this.handleRowClick.bind(this);
     this.textSearch = this.props.textSearch || "";
 
-    // call the store
-    this.props.requestUsers(this.textSearch);
+    if (this.props.isFetching === false && this.props.users === null) {
+      // call the store
+      this.props.requestUsers(this.textSearch);
+    }
   }
 
   handleTextSearchChange(value) {
@@ -41,7 +43,7 @@ class Users extends Component {
   render() {
     const users = this.props.users || [];
     let content;
-    if (this.props.busy) {
+    if (this.props.isFetching) {
       content = <Loading />;
     }
     else {
@@ -73,7 +75,7 @@ class Users extends Component {
 
 Users.propTypes = {
   textSearch: PropTypes.string.isRequired,
-  busy: PropTypes.bool.isRequired,
+  isFetching: PropTypes.bool.isRequired,
   users: PropTypes.array,
   requestUsers: PropTypes.func.isRequired,
 };
@@ -83,7 +85,7 @@ const mapStateToProps = (state, ownProps) => {
 
   return {
     textSearch: users.userTextSearch,
-    busy: users.busy,
+    isFetching: users.isFetching,
     users: users.users
   };
 };
