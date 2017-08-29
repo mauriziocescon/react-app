@@ -11,6 +11,7 @@ class TextSearch extends Component {
   constructor(props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
+    this.handleClick = this.handleClick.bind(this);
     this.value = this.props.value;
     this.searchPlaceholder = this.props.intl.formatMessage({id: "text-search.text-placeholder", defaultMessage: "Insert text"});
   }
@@ -18,6 +19,13 @@ class TextSearch extends Component {
   handleChange(event) {
     this.value = event.target.value;
     this.props.onValueChange(this.value);
+  }
+
+  handleClick(event) {
+    if (this.value) {
+      this.value = "";
+      this.props.onValueChange(this.value);
+    }
   }
 
   render() {
@@ -32,8 +40,8 @@ class TextSearch extends Component {
                 onChange={this.handleChange}
                 placeholder={this.searchPlaceholder}
               />
-              <InputGroup.Addon>
-                <FontAwesome className="Addon" name="search"/>
+              <InputGroup.Addon onClick={this.handleClick}>
+                <FontAwesome className="Addon" name={this.value ? "remove" : "search"}/>
               </InputGroup.Addon>
             </InputGroup>
           </FormGroup>

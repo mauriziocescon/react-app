@@ -7,6 +7,8 @@ import { Grid } from "react-bootstrap";
 import "./Users.css";
 
 import Loading from "../../../components/Loading/Loading";
+import LoadCompleted from "../../../components/LoadCompleted/LoadCompleted";
+import NoResult from "../../../components/NoResult/NoResult";
 import TextSearch from "../../../components/TextSearch/TextSearch";
 import UserRow from "../../../components/UserRow/UserRow";
 import { requestUsers } from "../../../actions";
@@ -48,6 +50,13 @@ class Users extends Component {
           <UserRow key={user.id} user={user} onRowClick={this.handleRowClick}/>
         );
       });
+
+      if (users && users.length) {
+        content = content.concat(<LoadCompleted/>);
+      }
+      else {
+        content = content.concat(<NoResult/>);
+      }
     }
 
     return (
