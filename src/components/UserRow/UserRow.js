@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { injectIntl, intlShape } from "react-intl";
-import { Row, Col } from "react-bootstrap";
+import { injectIntl, intlShape, FormattedMessage } from "react-intl";
+import { Row, Col, Button } from "react-bootstrap";
 
 import "./UserRow.css";
 
@@ -21,6 +21,38 @@ class UserRow extends Component {
     return (
       <Row>
         <Col className="UserRow" xs={12} onClick={this.handleClick}>
+          <Row>
+            <Col xs={10}>
+              <Row>
+                <Col xs={12} sm={6}>
+                  <div className="UserLabel">
+                    <FormattedMessage
+                      id="user-row.name"
+                      defaultMessage="Name"
+                    />
+                  </div>
+                  <div className="UserValue">
+                    {this.user.name + " (" + this.user.username + ")"}
+                  </div>
+                </Col>
+              </Row>
+            </Col>
+            <Col xs={2}>
+              <Button bsStyle="primary">
+                <FormattedMessage
+                  id="user-row.todos"
+                  defaultMessage="Todos"
+                />
+              </Button>
+              <Button bsStyle="primary">
+                <FormattedMessage
+                  id="user-row.posts"
+                  defaultMessage="Posts"
+                />
+              </Button>
+            </Col>
+          </Row>
+
           {JSON.stringify(this.user)}
         </Col>
       </Row>

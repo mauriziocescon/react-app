@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { injectIntl, intlShape } from "react-intl";
+import { injectIntl, intlShape, FormattedMessage } from "react-intl";
 import { Row, Col } from "react-bootstrap";
-import { FormattedMessage } from "react-intl";
 
 import "./Retry.css";
 
