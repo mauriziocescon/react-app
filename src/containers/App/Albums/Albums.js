@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import { FormattedMessage, FormattedNumber } from "react-intl";
 import { Grid, Row, Col, Button } from "react-bootstrap";
 

@@ -22,7 +22,7 @@ export const getConfigForLanguage = language => {
 };
 
 const configureLocale = preloadedState => {
-  addLocaleData([...en, ...it]);
+  addLocaleData([...de, ...en, ...it]);
 
   return {
     ...preloadedState,

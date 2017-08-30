@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { FormattedMessage } from "react-intl";
 import { Grid } from "react-bootstrap";
 
 import "./Users.css";
