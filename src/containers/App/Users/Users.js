@@ -5,9 +5,10 @@ import { Grid } from "react-bootstrap";
 
 import "./Users.css";
 
-import Loading from "../../../components/Loading/Loading";
 import LoadCompleted from "../../../components/LoadCompleted/LoadCompleted";
+import Loading from "../../../components/Loading/Loading";
 import NoResult from "../../../components/NoResult/NoResult";
+import Retry from "../../../components/Retry/Retry";
 import TextSearch from "../../../components/TextSearch/TextSearch";
 import UserRow from "../../../components/UserRow/UserRow";
 import { requestUsers } from "../../../actions";
@@ -18,9 +19,10 @@ class Users extends Component {
     super(props);
     this.handleTextSearchChange = this.handleTextSearchChange.bind(this);
     this.handleRowClick = this.handleRowClick.bind(this);
+    this.handleRetryClick = this.handleRetryClick.bind(this);
     this.textSearch = this.props.textSearch || "";
 
-    if (this.props.isFetching === false && this.props.users === null) {
+    if (!this.props.usersFailureError && !this.props.users) {
       // call the store
       this.props.requestUsers(this.textSearch);
     }
@@ -34,30 +36,38 @@ class Users extends Component {
   }
 
   handleRowClick(event) {
-    console.log("Clicked!");
+    alert("Clicked!");
 
     // todo: call the store
   }
 
+  handleRetryClick(event) {
+    // call the store
+    this.props.requestUsers(this.textSearch);
+  }
+
   render() {
-    const users = this.props.users || [];
+    const users = this.props.users;
     let content;
+
     if (this.props.isFetching) {
-      content = <Loading />;
+      content = <Loading/>;
     }
-    else {
+    else if (users) {
       content = users.map((user) => {
         return (
           <UserRow key={user.id} user={user} onRowClick={this.handleRowClick}/>
         );
       });
-
-      if (users && users.length) {
+      if (users.length) {
         content = content.concat(<LoadCompleted/>);
       }
       else {
         content = content.concat(<NoResult/>);
       }
+    }
+    else {
+      content = <Retry onRetryClick={this.handleRetryClick}/>;
     }
 
     return (
@@ -76,16 +86,17 @@ Users.propTypes = {
   textSearch: PropTypes.string.isRequired,
   isFetching: PropTypes.bool.isRequired,
   users: PropTypes.array,
-  requestUsers: PropTypes.func.isRequired,
+  requestUsers: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state, ownProps) => {
-  const { users } = state;
+  const {users} = state;
 
   return {
     textSearch: users.userTextSearch,
     isFetching: users.isFetching,
-    users: users.users
+    users: users.users,
+    usersFailureError: users.usersFailureError
   };
 };
 

@@ -24,6 +24,7 @@ const users = (state = userInitialState, action) => {
     case FETCH_USERS_FAILED:
       return {
         ...state,
+        users: null,
         usersFailureError: action.usersFailureError,
         isFetching: false
       };

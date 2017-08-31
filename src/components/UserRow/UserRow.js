@@ -35,6 +35,61 @@ class UserRow extends Component {
                     {this.user.name + " (" + this.user.username + ")"}
                   </div>
                 </Col>
+                <Col xs={12} sm={6}>
+                  <div className="UserLabel">
+                    <FormattedMessage
+                      id="user-row.address"
+                      defaultMessage="Address"
+                    />
+                  </div>
+                  <div className="UserValue">
+                    {this.user.address.street + " " + this.user.address.suite + ", " + this.user.address.city + " (" + this.user.address.zipcode + ")"}
+                  </div>
+                </Col>
+                <Col xs={12} sm={6}>
+                  <div className="UserLabel">
+                    <FormattedMessage
+                      id="user-row.email"
+                      defaultMessage="Email"
+                    />
+                  </div>
+                  <div className="UserValue">
+                    {this.user.email}
+                  </div>
+                </Col>
+                <Col xs={12} sm={6}>
+                  <div className="UserLabel">
+                    <FormattedMessage
+                      id="user-row.phone"
+                      defaultMessage="Phone"
+                    />
+                  </div>
+                  <div className="UserValue">
+                    {this.user.phone}
+                  </div>
+                </Col>
+                <Col xs={12} sm={6}>
+                  <div className="UserLabel">
+                    <FormattedMessage
+                      id="user-row.website"
+                      defaultMessage="Website"
+                    />
+                  </div>
+                  <div className="UserValue">
+                    {this.user.website}
+                  </div>
+                </Col>
+                <Col xs={12} sm={6}>
+                  <div className="UserLabel">
+                    <FormattedMessage
+                      id="user-row.company"
+                      defaultMessage="Company"
+                    />
+                  </div>
+                  <div className="UserValue">
+                    {this.user.company.name + " " + this.user.company.catchPhrase + this.user.company.bs}
+                  </div>
+                </Col>
               </Row>
             </Col>
             <Col xs={2}>
@@ -52,8 +107,6 @@ class UserRow extends Component {
               </Button>
             </Col>
           </Row>
-
-          {JSON.stringify(this.user)}
         </Col>
       </Row>
     );
