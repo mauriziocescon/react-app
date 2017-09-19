@@ -60,10 +60,10 @@ class Users extends Component {
         );
       });
       if (users.length) {
-        content = content.concat(<LoadCompleted/>);
+        content = content.concat(<LoadCompleted key={"###"}/>);
       }
       else {
-        content = content.concat(<NoResult/>);
+        content = content.concat(<NoResult key={"###"}/>);
       }
     }
     else {
