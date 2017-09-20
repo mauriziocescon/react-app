@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Loading from "./Loading";
+import { Loading } from "./Loading";
 
 it("renders without crashing", () => {
   const div = document.createElement("div");

@@ -5,7 +5,7 @@ import { Row, Col } from "react-bootstrap";
 
 import "./Loading.css";
 
-class Loading extends Component {
+export class Loading extends Component {
 
   render() {
     return (

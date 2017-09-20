@@ -5,7 +5,7 @@ import { Row, Col, Button } from "react-bootstrap";
 
 import "./UserRow.css";
 
-class UserRow extends Component {
+export class UserRow extends Component {
 
   constructor(props) {
     super(props);

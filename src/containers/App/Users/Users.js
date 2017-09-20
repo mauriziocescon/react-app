@@ -13,7 +13,7 @@ import TextSearch from "../../../components/TextSearch/TextSearch";
 import UserRow from "../../../components/UserRow/UserRow";
 import { requestUsers } from "../../../actions";
 
-class Users extends Component {
+export class Users extends Component {
 
   constructor(props) {
     super(props);

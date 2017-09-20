@@ -6,7 +6,7 @@ import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from "react-bootstrap";
 
 import "./NavigationBar.css";
 
-class NavigationBar extends Component {
+export class NavigationBar extends Component {
 
   constructor(props) {
     super(props);

@@ -5,7 +5,7 @@ import { Row, Col } from "react-bootstrap";
 
 import "./LoadCompleted.css";
 
-class LoadCompleted extends Component {
+export class LoadCompleted extends Component {
 
   render() {
     return (

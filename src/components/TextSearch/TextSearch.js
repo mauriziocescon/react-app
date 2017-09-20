@@ -6,7 +6,7 @@ import FontAwesome from "react-fontawesome";
 
 import "./TextSearch.css";
 
-class TextSearch extends Component {
+export class TextSearch extends Component {
 
   constructor(props) {
     super(props);

@@ -5,7 +5,7 @@ import { Row, Col } from "react-bootstrap";
 
 import "./NoResult.css";
 
-class NoResult extends Component {
+export class NoResult extends Component {
 
   render() {
     return (

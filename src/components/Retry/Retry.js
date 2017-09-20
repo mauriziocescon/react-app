@@ -5,7 +5,7 @@ import { Row, Col } from "react-bootstrap";
 
 import "./Retry.css";
 
-class Retry extends Component {
+export class Retry extends Component {
 
   constructor(props) {
     super(props);
