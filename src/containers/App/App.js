@@ -15,6 +15,9 @@ class App extends Component {
     this.handleLanguageChange = this.handleLanguageChange.bind(this);
     this.selectedLanguage = this.props.selectedLanguage || defaultLanguage;
     this.availableLanguages = availableLanguages;
+
+    // set the default location
+    this.props.router.push("users");
   }
 
   handleLanguageChange(eventKey, event) {

@@ -6,7 +6,7 @@ import Users from "./containers/App/Users/Users";
 
 export default (
   <Route path="/" component={App}>
-    <Route path="albums" component={Albums}/>
-    <Route path="users" component={Users}/>
+    <Route exact path="albums" component={Albums}/>
+    <Route exact path="users" component={Users}/>
   </Route>
 );
