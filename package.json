@@ -6,7 +6,7 @@
   "homepage": "http://www.mauriziocescon.com",
   "private": false,
   "engines": {
-    "node": ">=6.11.4",
+    "node": ">=6.11.5",
     "npm": ">=3.10.10"
   },
   "scripts": {
@@ -23,7 +23,7 @@
     "react-dom": "16.0.0",
     "react-fontawesome": "1.6.1",
     "react-intl": "2.4.0",
-    "react-intl-redux": "0.6.0",
+    "react-intl-redux": "0.7.0",
     "react-redux": "5.0.6",
     "react-router": "3.0.5",
     "react-router-redux": "4.0.8",
