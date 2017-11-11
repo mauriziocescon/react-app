@@ -5,10 +5,7 @@ Application currently in alpha
 
 ## Development server
 
-1. Download the following extensions [react-devtools](https://github.com/facebook/react-devtools) 
-and [redux-devtools](https://github.com/zalmoxisus/redux-devtools-extension) for your browser  
-
-2. Run `npm run start` for a dev server. Navigate to `http://localhost:3000/`. The app will automatically reload if you change any of the source files.
+1. Run `npm run start` for a dev server. Navigate to `http://localhost:3000/`. The app will automatically reload if you change any of the source files.
 
 ## Build
 
@@ -17,3 +14,7 @@ and [redux-devtools](https://github.com/zalmoxisus/redux-devtools-extension) for
 ## Running unit tests
 
 1. Run `npm run test` to execute the unit tests.
+
+## Backend implementation 
+
+1. Definition of mock responses using [json-server](https://github.com/typicode/json-server) and [faker](https://github.com/Marak/faker.js) (APIs available at `http://localhost:5000`)
