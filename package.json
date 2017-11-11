@@ -10,17 +10,38 @@
     "npm": ">=5.5.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "postinstall": "node mock-server/db-creator.js",
+    "start": "react-scripts start | json-server --watch mock-server/db.json --port 5000",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mauriziocescon/react-app"
+  },
+  "keywords": [
+    "react",
+    "bootstrap",
+    "cescon",
+    "es2017",
+    "maurizio",
+    "redux-saga",
+    "react-intl",
+    "json-server"
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/brentertz/scapegoat/blob/master/LICENSE-MIT"
+    }
+  ],
   "dependencies": {
     "font-awesome": "4.7.0",
     "prop-types": "15.6.0",
-    "react": "16.0.0",
-    "react-bootstrap": "0.31.4",
-    "react-dom": "16.0.0",
+    "react": "16.1.0",
+    "react-bootstrap": "0.31.5",
+    "react-dom": "16.1.0",
     "react-fontawesome": "1.6.1",
     "react-intl": "2.4.0",
     "react-intl-redux": "0.7.0",
@@ -34,8 +55,10 @@
   },
   "devDependencies": {
     "enzyme": "3.1.1",
+    "faker": "4.1.0",
+    "json-server": "0.12.1",
     "react-scripts": "1.0.17",
-    "react-test-renderer": "16.0.0",
+    "react-test-renderer": "16.1.0",
     "redux-logger": "3.0.6"
   }
 }
