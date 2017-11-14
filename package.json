@@ -10,8 +10,9 @@
     "npm": ">=5.5.1"
   },
   "scripts": {
-    "postinstall": "node mock-server/db-creator.js",
-    "start": "react-scripts start | json-server --watch mock-server/db.json --port 5000",
+    "postinstall": "node ./mock-server/db-creator.js",
+    "json-server": "nodemon ./mock-server/server.js",
+    "start": "react-scripts start | npm run json-server",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
@@ -57,6 +58,7 @@
     "enzyme": "3.1.1",
     "faker": "4.1.0",
     "json-server": "0.12.1",
+    "nodemon": "1.12.1",
     "react-scripts": "1.0.17",
     "react-test-renderer": "16.1.0",
     "redux-logger": "3.0.6"
