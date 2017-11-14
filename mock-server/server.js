@@ -28,7 +28,7 @@ server.use("/api", router);
 // Fallback on frontend routes
 server.get("*", (req, res) => {
   // load the single view file (frontend will handle the page changes on the front-end)
-  res.sendFile(path.join(__dirname, "../dist/index.html"));
+  res.sendFile(path.join(__dirname, "../build/index.html"));
 });
 
 // Start listening
