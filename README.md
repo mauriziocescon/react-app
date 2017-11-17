@@ -3,6 +3,10 @@ Demo built on react + redux [Create React App](https://github.com/facebookincuba
 
 Application currently in alpha
 
+## Backend implementation 
+
+Definition of mock responses using [json-server](https://github.com/typicode/json-server) and [faker](https://github.com/Marak/faker.js) (APIs available at `http://localhost:5000/api/`)
+
 ## Development server
 
 1. Run `npm run start` for a dev server. Navigate to `http://localhost:3000/`. The app will automatically reload if you change any of the source files.
@@ -14,7 +18,3 @@ Application currently in alpha
 ## Running unit tests
 
 1. Run `npm run test` to execute the unit tests.
-
-## Backend implementation 
-
-1. Definition of mock responses using [json-server](https://github.com/typicode/json-server) and [faker](https://github.com/Marak/faker.js) (APIs available at `http://localhost:5000`)
