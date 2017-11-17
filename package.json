@@ -14,7 +14,6 @@
     "prestart": "npm run build",
     "start": "npm run json-server",
     "json-server": "nodemon ./mock-server/server.js",
-
     "serve": "react-scripts start | npm run json-server",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
