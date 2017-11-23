@@ -29,10 +29,12 @@
     "es2017",
     "json-server",
     "maurizio",
+    "mock-server",
     "react",
     "react-intl",
     "redux",
-    "redux-saga"
+    "redux-saga",
+    "travis"
   ],
   "licenses": [
     {
