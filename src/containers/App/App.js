@@ -54,7 +54,7 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = {
-  requestUsers
+  changeLanguage
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
