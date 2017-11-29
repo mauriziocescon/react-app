@@ -48,6 +48,7 @@ const mapStateToProps = (state, ownProps) => {
   return {};
 };
 
-export default connect(mapStateToProps
+const mapDispatchToProps = {
+};
 
-)(Albums);
+export default connect(mapStateToProps, mapDispatchToProps)(Albums);

@@ -100,6 +100,8 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-export default connect(mapStateToProps, {
+const mapDispatchToProps = {
   requestUsers
-})(Users);
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Users);

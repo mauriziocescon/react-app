@@ -53,6 +53,8 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
-export default connect(mapStateToProps, {
-  changeLanguage
-})(App);
+const mapDispatchToProps = {
+  requestUsers
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
