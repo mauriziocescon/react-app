@@ -86,6 +86,7 @@ Users.propTypes = {
   textSearch: PropTypes.string.isRequired,
   isFetching: PropTypes.bool.isRequired,
   users: PropTypes.array,
+  usersFailureError: PropTypes.string,
   requestUsers: PropTypes.func.isRequired
 };
 
