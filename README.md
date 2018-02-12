@@ -3,6 +3,10 @@ Demo built on react + redux [Create React App](https://github.com/facebookincuba
 
 Application currently in alpha
 
+## Demo 
+
+1. [Demo](https://mc-react-app.herokuapp.com) powered by Heroku 
+
 ## Backend implementation 
 
 1. Based on [json-server](https://github.com/typicode/json-server) with mocks from [faker](https://github.com/Marak/faker.js) (APIs available at `http://localhost:5000/api/`)
