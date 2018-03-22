@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { Link } from "react-router";
-import { FormattedMessage } from "react-intl";
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from "react-bootstrap";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router';
+import { FormattedMessage } from 'react-intl';
+import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 
-import "./NavigationBar.css";
+import './NavigationBar.css';
 
 export class NavigationBar extends Component {
 
@@ -23,7 +23,7 @@ export class NavigationBar extends Component {
     const languagesItems = this.languages.map((language) => {
       return (
         <MenuItem key={language} eventKey={language}>{language}</MenuItem>
-      )
+      );
     });
 
     return (
@@ -59,7 +59,8 @@ export class NavigationBar extends Component {
             </NavItem>
           </Nav>
           <Nav pullRight>
-            <NavDropdown id="language-nav-dropdown" eventKey={3} title={this.dropdownTitle} onSelect={this.handleSelect}>
+            <NavDropdown id="language-nav-dropdown" eventKey={3} title={this.dropdownTitle}
+                         onSelect={this.handleSelect}>
               {languagesItems}
             </NavDropdown>
           </Nav>
@@ -72,7 +73,7 @@ export class NavigationBar extends Component {
 NavigationBar.propTypes = {
   selectedLanguage: PropTypes.string.isRequired,
   availableLanguages: PropTypes.array.isRequired,
-  onLanguageChange: PropTypes.func.isRequired
+  onLanguageChange: PropTypes.func.isRequired,
 };
 
 export default NavigationBar;

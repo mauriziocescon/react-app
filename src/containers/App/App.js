@@ -1,12 +1,12 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
-import { defaultLanguage, availableLanguages } from "../../i18n/configureLocale";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { defaultLanguage, availableLanguages } from '../../i18n/configureLocale';
 
-import "./App.css";
+import './App.css';
 
-import NavigationBar from "../../components/NavigationBar/NavigationBar";
-import { changeLanguage } from "../../actions";
+import NavigationBar from '../../components/NavigationBar/NavigationBar';
+import { changeLanguage } from '../../actions';
 
 class App extends Component {
 
@@ -17,7 +17,7 @@ class App extends Component {
     this.availableLanguages = availableLanguages;
 
     // set the default location
-    this.props.router.push("users");
+    this.props.router.push('users');
   }
 
   handleLanguageChange(eventKey, event) {
@@ -44,17 +44,17 @@ class App extends Component {
 App.propTypes = {
   children: PropTypes.object.isRequired,
   selectedLanguage: PropTypes.string.isRequired,
-  changeLanguage: PropTypes.func.isRequired
+  changeLanguage: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    selectedLanguage: state.intl.locale
+    selectedLanguage: state.intl.locale,
   };
 };
 
 const mapDispatchToProps = {
-  changeLanguage
+  changeLanguage,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

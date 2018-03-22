@@ -4,7 +4,7 @@
 
 .NavigatorBarLink,
 .NavigatorBarLink.active,
-.NavigatorBarLink:hover{
+.NavigatorBarLink:hover {
   color: #fff;
   text-decoration: none;
 }

@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { injectIntl, intlShape, FormattedMessage } from "react-intl";
-import { Row, Col } from "react-bootstrap";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { injectIntl, intlShape, FormattedMessage } from 'react-intl';
+import { Row, Col } from 'react-bootstrap';
 
-import "./Retry.css";
+import './Retry.css';
 
 export class Retry extends Component {
 
@@ -34,7 +34,7 @@ export class Retry extends Component {
 
 Retry.propTypes = {
   onRetryClick: PropTypes.func.isRequired,
-  intl: intlShape.isRequired
+  intl: intlShape.isRequired,
 };
 
 export default injectIntl(Retry);

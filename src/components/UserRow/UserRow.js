@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { injectIntl, intlShape, FormattedMessage } from "react-intl";
-import { Row, Col, Button } from "react-bootstrap";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { injectIntl, intlShape, FormattedMessage } from 'react-intl';
+import { Row, Col, Button } from 'react-bootstrap';
 
-import "./UserRow.css";
+import './UserRow.css';
 
 export class UserRow extends Component {
 
@@ -32,7 +32,7 @@ export class UserRow extends Component {
                     />
                   </div>
                   <div className="UserValue">
-                    {this.user.name + " (" + this.user.username + ")"}
+                    {this.user.name + ' (' + this.user.username + ')'}
                   </div>
                 </Col>
                 <Col xs={12} sm={6}>
@@ -43,7 +43,7 @@ export class UserRow extends Component {
                     />
                   </div>
                   <div className="UserValue">
-                    {this.user.address.street + " " + this.user.address.suite + ", " + this.user.address.city + " (" + this.user.address.zipcode + ")"}
+                    {this.user.address.street + ' ' + this.user.address.suite + ', ' + this.user.address.city + ' (' + this.user.address.zipcode + ')'}
                   </div>
                 </Col>
                 <Col xs={12} sm={6}>
@@ -87,7 +87,7 @@ export class UserRow extends Component {
                     />
                   </div>
                   <div className="UserValue">
-                    {this.user.company.name + " " + this.user.company.catchPhrase + this.user.company.bs}
+                    {this.user.company.name + ' ' + this.user.company.catchPhrase + this.user.company.bs}
                   </div>
                 </Col>
               </Row>
@@ -116,7 +116,7 @@ export class UserRow extends Component {
 UserRow.propTypes = {
   user: PropTypes.object.isRequired,
   onRowClick: PropTypes.func.isRequired,
-  intl: intlShape.isRequired
+  intl: intlShape.isRequired,
 };
 
 export default injectIntl(UserRow);

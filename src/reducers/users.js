@@ -1,10 +1,10 @@
-import { FETCH_USERS_REQUESTED, FETCH_USERS_SUCCEEDED, FETCH_USERS_FAILED } from "../actions";
+import { FETCH_USERS_REQUESTED, FETCH_USERS_SUCCEEDED, FETCH_USERS_FAILED } from '../actions';
 
 const userInitialState = {
-  userTextSearch: "",
+  userTextSearch: '',
   isFetching: false,
   users: null,
-  usersFailureError: null
+  usersFailureError: null,
 };
 
 const users = (state = userInitialState, action) => {
@@ -13,20 +13,20 @@ const users = (state = userInitialState, action) => {
       return {
         ...state,
         userTextSearch: action.userTextSearch,
-        isFetching: true
+        isFetching: true,
       };
     case FETCH_USERS_SUCCEEDED:
       return {
         ...state,
         users: action.users,
-        isFetching: false
+        isFetching: false,
       };
     case FETCH_USERS_FAILED:
       return {
         ...state,
         users: null,
         usersFailureError: action.usersFailureError,
-        isFetching: false
+        isFetching: false,
       };
     default:
       return state;

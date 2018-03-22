@@ -1,2 +1,2 @@
 // URLs
-export const fetchUsersUrl = "/api/users";
+export const fetchUsersUrl = '/api/users';

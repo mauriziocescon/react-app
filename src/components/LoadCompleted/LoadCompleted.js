@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 // import PropTypes from "prop-types";
-import { injectIntl, intlShape, FormattedMessage } from "react-intl";
-import { Row, Col } from "react-bootstrap";
+import { injectIntl, intlShape, FormattedMessage } from 'react-intl';
+import { Row, Col } from 'react-bootstrap';
 
-import "./LoadCompleted.css";
+import './LoadCompleted.css';
 
 export class LoadCompleted extends Component {
 
@@ -24,7 +24,7 @@ export class LoadCompleted extends Component {
 }
 
 LoadCompleted.propTypes = {
-  intl: intlShape.isRequired
+  intl: intlShape.isRequired,
 };
 
 export default injectIntl(LoadCompleted);

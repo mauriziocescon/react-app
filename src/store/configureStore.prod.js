@@ -1,8 +1,8 @@
-import { createStore, applyMiddleware } from "redux";
-import thunk from "redux-thunk";
-import createSagaMiddleware from "redux-saga";
-import rootReducer from "../reducers";
-import rootSaga from "../sagas";
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import createSagaMiddleware from 'redux-saga';
+import rootReducer from '../reducers';
+import rootSaga from '../sagas';
 
 const saga = createSagaMiddleware();
 
@@ -13,7 +13,7 @@ const configureStore = preloadedState => {
   const store = createStore(
     rootReducer,
     preloadedState,
-    applyMiddleware(...middleware)
+    applyMiddleware(...middleware),
   );
 
   saga.run(rootSaga);

@@ -1,7 +1,7 @@
-import { delay } from "redux-saga";
-import { call, put, takeLatest } from "redux-saga/effects";
-import { fetchUsers } from "../apis";
-import { FETCH_USERS_REQUESTED, receiveUsers, usersFailure } from "../actions";
+import { delay } from 'redux-saga';
+import { call, put, takeLatest } from 'redux-saga/effects';
+import { fetchUsers } from '../apis';
+import { FETCH_USERS_REQUESTED, receiveUsers, usersFailure } from '../actions';
 
 export function* fetchData(action) {
   try {

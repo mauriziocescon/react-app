@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { injectIntl, intlShape } from "react-intl";
-import { Row, Col, FormGroup, FormControl, InputGroup } from "react-bootstrap";
-import FontAwesome from "react-fontawesome";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { injectIntl, intlShape } from 'react-intl';
+import { Row, Col, FormGroup, FormControl, InputGroup } from 'react-bootstrap';
+import FontAwesome from 'react-fontawesome';
 
-import "./TextSearch.css";
+import './TextSearch.css';
 
 export class TextSearch extends Component {
 
@@ -13,7 +13,10 @@ export class TextSearch extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.value = this.props.value;
-    this.searchPlaceholder = this.props.intl.formatMessage({id: "text-search.text-placeholder", defaultMessage: "Insert text"});
+    this.searchPlaceholder = this.props.intl.formatMessage({
+      id: 'text-search.text-placeholder',
+      defaultMessage: 'Insert text',
+    });
   }
 
   handleChange(event) {
@@ -23,7 +26,7 @@ export class TextSearch extends Component {
 
   handleClick(event) {
     if (this.value) {
-      this.value = "";
+      this.value = '';
       this.props.onValueChange(this.value);
     }
   }
@@ -41,7 +44,7 @@ export class TextSearch extends Component {
                 placeholder={this.searchPlaceholder}
               />
               <InputGroup.Addon onClick={this.handleClick}>
-                <FontAwesome className="Addon" name={this.value ? "remove" : "search"}/>
+                <FontAwesome className="Addon" name={this.value ? 'remove' : 'search'}/>
               </InputGroup.Addon>
             </InputGroup>
           </FormGroup>
@@ -54,7 +57,7 @@ export class TextSearch extends Component {
 TextSearch.propTypes = {
   value: PropTypes.string.isRequired,
   onValueChange: PropTypes.func.isRequired,
-  intl: intlShape.isRequired
+  intl: intlShape.isRequired,
 };
 
 export default injectIntl(TextSearch);

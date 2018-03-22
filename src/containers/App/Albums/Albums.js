@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 // import PropTypes from "prop-types";
-import { FormattedMessage, FormattedNumber } from "react-intl";
-import { Grid, Row, Col, Button } from "react-bootstrap";
+import { FormattedMessage, FormattedNumber } from 'react-intl';
+import { Grid, Row, Col, Button } from 'react-bootstrap';
 
-import "./Albums.css";
+import './Albums.css';
 
 export class Albums extends Component {
 
@@ -20,7 +20,7 @@ export class Albums extends Component {
               id="albums.example"
               defaultMessage="default message"
               values={{
-                value: "passed message"
+                value: 'passed message',
               }}
             />
           </Col>
@@ -30,7 +30,7 @@ export class Albums extends Component {
                 id="albums.example"
                 defaultMessage="default message"
                 values={{
-                  value: "passed message"
+                  value: 'passed message',
                 }}
               />
             </Button>
@@ -41,14 +41,12 @@ export class Albums extends Component {
   }
 }
 
-Albums.propTypes = {
-};
+Albums.propTypes = {};
 
 const mapStateToProps = (state, ownProps) => {
   return {};
 };
 
-const mapDispatchToProps = {
-};
+const mapDispatchToProps = {};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Albums);
