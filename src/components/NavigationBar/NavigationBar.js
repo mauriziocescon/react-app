@@ -37,7 +37,6 @@ export class NavigationBar extends Component {
               />
             </a>
           </Navbar.Brand>
-          <Navbar.Toggle/>
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav>
