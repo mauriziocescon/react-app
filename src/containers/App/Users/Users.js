@@ -71,7 +71,7 @@ export class Users extends Component {
     }
 
     return (
-      <Grid fluid className="Albums">
+      <Grid fluid className="Users">
         <TextSearch
           value={this.textSearch}
           onValueChange={this.handleTextSearchChange}
