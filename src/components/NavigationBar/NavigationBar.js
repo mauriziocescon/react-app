@@ -11,8 +11,6 @@ export class NavigationBar extends Component {
   constructor(props) {
     super(props);
     this.handleSelect = this.handleSelect.bind(this);
-    this.dropdownTitle = this.props.selectedLanguage;
-    this.languages = this.props.availableLanguages;
   }
 
   handleSelect(eventKey, event) {
@@ -20,7 +18,10 @@ export class NavigationBar extends Component {
   }
 
   render() {
-    const languagesItems = this.languages.map((language) => {
+    const dropdownTitle = this.props.selectedLanguage;
+    const languages = this.props.availableLanguages;
+
+    const languagesItems = languages.map((language) => {
       return (
         <MenuItem key={language} eventKey={language}>{language}</MenuItem>
       );
@@ -58,7 +59,7 @@ export class NavigationBar extends Component {
             </NavItem>
           </Nav>
           <Nav pullRight>
-            <NavDropdown id="language-nav-dropdown" eventKey={3} title={this.dropdownTitle}
+            <NavDropdown id="language-nav-dropdown" eventKey={3} title={dropdownTitle}
                          onSelect={this.handleSelect}>
               {languagesItems}
             </NavDropdown>

@@ -13,8 +13,6 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.handleLanguageChange = this.handleLanguageChange.bind(this);
-    this.selectedLanguage = this.props.selectedLanguage || defaultLanguage;
-    this.availableLanguages = availableLanguages;
 
     // set the default location
     this.props.router.push('users');
@@ -26,11 +24,13 @@ class App extends Component {
   }
 
   render() {
+    const selectedLanguage = this.props.selectedLanguage || defaultLanguage;
+
     return (
       <div className="App">
         <NavigationBar
-          selectedLanguage={this.selectedLanguage}
-          availableLanguages={this.availableLanguages}
+          selectedLanguage={selectedLanguage}
+          availableLanguages={availableLanguages}
           onLanguageChange={this.handleLanguageChange}
         />
         <div className="App-main-content">

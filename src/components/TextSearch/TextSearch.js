@@ -13,10 +13,6 @@ export class TextSearch extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.value = this.props.value;
-    this.searchPlaceholder = this.props.intl.formatMessage({
-      id: 'text-search.text-placeholder',
-      defaultMessage: 'Insert text',
-    });
   }
 
   handleChange(event) {
@@ -32,6 +28,11 @@ export class TextSearch extends Component {
   }
 
   render() {
+    const searchPlaceholder = this.props.intl.formatMessage({
+      id: 'text-search.text-placeholder',
+      defaultMessage: 'Insert text',
+    });
+
     return (
       <Row>
         <Col xs={12}>
@@ -41,7 +42,7 @@ export class TextSearch extends Component {
                 type="search"
                 value={this.value}
                 onChange={this.handleChange}
-                placeholder={this.searchPlaceholder}
+                placeholder={searchPlaceholder}
               />
               <InputGroup.Addon onClick={this.handleClick}>
                 <FontAwesome className="Addon" name={this.value ? 'remove' : 'search'}/>
