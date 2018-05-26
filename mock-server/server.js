@@ -4,7 +4,7 @@ const app = jsonServer.create();
 const dbUrl = require('./db/constants').dbUrl;
 const router = jsonServer.router(dbUrl);
 const middlewares = jsonServer.defaults({
-  static: 'build',
+  static: 'dist',
 });
 
 const delayMiddleware = require('./middlewares/delay');
@@ -25,7 +25,7 @@ app.use('/api', router);
 // Fallback on frontend routes
 app.get('*', (req, res) => {
   // load the single view file (frontend will handle the page changes on the front-end)
-  res.sendFile(path.join(__dirname, '../build/index.html'));
+  res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
 // Start listening

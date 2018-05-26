@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": false,
+    "diagnostics": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "jsx": "preserve",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "pretty": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "strict": true,
+    "target": "ES2017",
+    "types": [
+      "jest"
+    ]
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "compileOnSave": false,
+  "atom": {
+    "rewriteTsconfig": false
+  }
+}

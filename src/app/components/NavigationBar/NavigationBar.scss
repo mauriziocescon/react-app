@@ -1,0 +1,12 @@
+.NavigationBar {
+  .NavbarBrand {
+    color: $accent-color;
+  }
+
+  .NavigatorBarLink,
+  .NavigatorBarLink.active,
+  .NavigatorBarLink:hover {
+    color: $accent-color;
+    text-decoration: none;
+  }
+}

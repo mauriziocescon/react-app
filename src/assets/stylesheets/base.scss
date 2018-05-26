@@ -1,0 +1,79 @@
+// -------------------------------------------------------
+// App variables
+
+$primary-color: #00b233 !default;
+$accent-color: #fff !default;
+$secondary-color: #333 !default;
+$info-color: #03a9f4;
+$success-color: #4caf50;
+$warning-color: #ff9800;
+$danger-color: #f44336;
+$gray-color: #666 !default;
+
+// -------------------------------------------------------
+// Bootstrap variables
+
+//== Colors
+$theme-colors: (
+  primary: $primary-color,
+  secondary: $secondary-color,
+  success: $success-color,
+  info: $info-color,
+  warning: $warning-color,
+  danger: $danger-color,
+  light: $gray-color,
+  dark: $gray-color
+);
+
+//== Typography
+$font-size-base: 1rem;
+$font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+
+//== Grid system
+$grid-gutter-width: 8px;
+
+//== Navbar
+$navbar-padding-y: 0.75rem;
+
+$navbar-light-color: $accent-color;
+$navbar-light-hover-color: $accent-color;
+
+//== Buttons
+
+// Forms
+$input-group-addon-bg: $primary-color;
+
+// -------------------------------------------------------
+// Font awesome variables
+
+// -------------------------------------------------------
+// Common style
+
+.full-width-message {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 1.5 * $font-size-base;
+  text-align: center;
+  font-weight: bold;
+}
+
+.go-up {
+  // stylelint-disable at-rule-no-unknown
+  @extend .fa;
+  @extend .fa-3x;
+  @extend .fa-chevron-circle-up;
+  // stylelint-enable at-rule-no-unknown
+
+  position: fixed;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: $primary-color;
+  background-color: $secondary-color;
+  opacity: 0.7;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 200;
+}
