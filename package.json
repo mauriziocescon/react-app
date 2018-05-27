@@ -135,7 +135,8 @@
       "tsx",
       "js",
       "jsx",
-      "json"
+      "json",
+      "node"
     ],
     "moduleNameMapper": {
       "^.+\\.(less|scss)$": "babel-jest"
