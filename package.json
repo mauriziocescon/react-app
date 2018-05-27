@@ -122,7 +122,8 @@
   "jest": {
     "globals": {
       "ts-jest": {
-        "tsConfigFile": "tsconfig.jest.json"
+        "tsConfigFile": "tsconfig.jest.json",
+        "useBabelrc": true
       }
     },
     "setupTestFrameworkScriptFile": "./src/tests-setup.tsx",
