@@ -1,6 +1,12 @@
 Demo built on react + redux 
 =========
 
+Application currently in beta
+
+## Demo 
+
+1. [Demo](https://mc-react-app.herokuapp.com) powered by Heroku 
+
 ## How to build the app
 
 1. Download and install [NodeJS](https://nodejs.org/en/)
