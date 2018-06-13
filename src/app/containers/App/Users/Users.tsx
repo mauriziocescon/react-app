@@ -128,4 +128,4 @@ const mapDispatchToProps = {
   requestUsers,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(injectIntl(Users));
+export default connect<any>(mapStateToProps, mapDispatchToProps)(injectIntl(Users));
