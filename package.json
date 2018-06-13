@@ -6,7 +6,7 @@
   "homepage": "http://www.mauriziocescon.com",
   "private": false,
   "engines": {
-    "node": "=8.11.2",
+    "node": "=8.11.3",
     "npm": "=5.6.0"
   },
   "scripts": {
@@ -31,6 +31,7 @@
     "mock-server",
     "react",
     "react-intl",
+    "reactstrap",
     "redux",
     "redux-saga",
     "travis"
@@ -45,8 +46,8 @@
     "babel-polyfill": "6.26.0",
     "bootstrap": "4.1.1",
     "font-awesome": "4.7.0",
-    "react": "16.4.0",
-    "react-dom": "16.4.0",
+    "react": "16.4.1",
+    "react-dom": "16.4.1",
     "react-fontawesome": "1.6.1",
     "react-intl": "2.4.0",
     "react-intl-redux": "2.0.0",
@@ -66,10 +67,9 @@
     "babel-plugin-transform-export-extensions": "6.22.0",
     "enzyme": "3.3.0",
     "enzyme-adapter-react-16": "1.1.1",
-
     "@types/faker": "4.1.2",
-    "@types/jest": "23.0.2",
-    "@types/node": "10.3.2",
+    "@types/jest": "23.1.0",
+    "@types/node": "10.3.3",
     "@types/react": "16.3.17",
     "@types/react-dom": "16.0.6",
     "@types/react-fontawesome": "1.6.3",
@@ -111,10 +111,10 @@
     "ts-jest": "22.4.6",
     "tslint": "5.10.0",
     "tslint-loader": "3.6.0",
-    "typescript": "2.9.1",
+    "typescript": "2.9.2",
     "typings-for-css-modules-loader": "1.7.0",
     "webpack": "4.12.0",
-    "webpack-cli": "3.0.4",
+    "webpack-cli": "3.0.6",
     "webpack-dev-server": "3.1.4",
     "webpack-manifest-plugin": "2.0.3",
     "webpack-merge": "4.1.2"
