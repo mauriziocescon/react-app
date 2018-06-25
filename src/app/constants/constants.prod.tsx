@@ -1,2 +1,4 @@
+import { environment } from '../../environments/environment';
+
 // URLs
-export const fetchUsersUrl = '/api/users';
+export const fetchUsersUrl = environment.apiUrl + 'users';
