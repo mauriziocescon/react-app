@@ -19,9 +19,9 @@ Application currently in beta
    
 ## Backend implementation 
 
-1. Based on [json-server](https://github.com/typicode/json-server) with mocks from [faker](https://github.com/Marak/faker.js) (APIs available at `http://localhost:5000/api/`)
+1. Based on [json-server](https://github.com/typicode/json-server) with mocks from [faker](https://github.com/Marak/faker.js) (APIs available at `http://localhost:3000/api/`)
 
-2. Run ``npm run build`` and ``npm start`` in order to launch the server (``http://localhost:5000``) with the distribution version of the app 
+2. Run ``npm run build`` and ``npm start`` in order to launch the server (``http://localhost:3000``) with the distribution version of the app 
 
 3. The server randomly simulates delays and errors for testing purposes
 
@@ -54,6 +54,8 @@ Application currently in beta
 11. [TSLint](https://palantir.github.io/tslint/) 
 
 12. [Stylelint](https://stylelint.io/) 
+
+13. [Webpack Bundle Analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer) 
 
 ## CSS Modules
 
