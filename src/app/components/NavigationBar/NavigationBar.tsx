@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { Component, ReactNode } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';

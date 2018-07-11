@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { Component, ReactNode } from 'react';
 import { FormattedMessage, InjectedIntlProps, injectIntl } from 'react-intl';
 import {

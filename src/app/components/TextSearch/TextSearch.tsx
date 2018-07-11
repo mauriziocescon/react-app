@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { Component, ReactNode } from 'react';
 import * as FontAwesome from 'react-fontawesome';
 import { InjectedIntlProps, injectIntl } from 'react-intl';

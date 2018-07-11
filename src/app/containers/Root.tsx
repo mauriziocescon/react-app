@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { Component, ReactNode } from 'react';
 import { IntlProvider } from 'react-intl-redux';
 import { Provider } from 'react-redux';

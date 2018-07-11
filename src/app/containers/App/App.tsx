@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { Component, ReactNode } from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';

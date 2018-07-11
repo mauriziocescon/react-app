@@ -3,11 +3,12 @@ module.exports = {
     'ts-jest': {
       'tsConfigFile': './tsconfig.jest.json',
       'useBabelrc': true,
+      'enableTsDiagnostics': true,
     },
   },
   setupTestFrameworkScriptFile: './src/tests-setup.tsx',
   transform: {
-    '^.+\\.tsx?$': 'ts-jest',
+    '^.+\\.(t|j)sx?$': 'ts-jest',
   },
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
   moduleFileExtensions: [
