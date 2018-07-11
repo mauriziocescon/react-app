@@ -114,14 +114,6 @@ module.exports = (env) => {
             {loader: 'tslint-loader', options: {emitErrors: false, formatter: 'stylish'}},
           ],
         },
-
-        // add React to the global object
-        {
-          test: require.resolve("react"),
-          use: [
-            {loader: "expose-loader", options: "React"},
-          ],
-        },
       ],
     },
   };
