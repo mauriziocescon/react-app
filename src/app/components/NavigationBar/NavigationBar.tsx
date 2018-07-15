@@ -1,8 +1,10 @@
 import * as React from 'react';
 import { Component, ReactNode } from 'react';
+import * as FontAwesome from 'react-fontawesome';
 import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
 import {
+  Button,
   DropdownItem,
   DropdownMenu,
   DropdownToggle,
@@ -13,6 +15,8 @@ import {
   NavLink,
   UncontrolledDropdown,
 } from 'reactstrap';
+
+import constants from '../../constants';
 
 import * as styles from './NavigationBar.scss';
 
@@ -26,6 +30,7 @@ export class NavigationBar extends Component<IProps> {
 
   constructor(props: IProps) {
     super(props);
+    this.handleServerClick = this.handleServerClick.bind(this);
     this.handleDropdownItemClick = this.handleDropdownItemClick.bind(this);
   }
 
@@ -36,6 +41,13 @@ export class NavigationBar extends Component<IProps> {
   public render(): ReactNode {
     const dropdownTitle = this.props.selectedLanguage;
     const languages = this.props.availableLanguages;
+
+    const serverButton = constants.SHOW_JSON_SERVER_API ?
+      <NavItem>
+        <Button color='secondary' onClick={this.handleServerClick}>
+          <FontAwesome className='Addon' name='server'/>
+        </Button>
+      </NavItem> : null;
 
     const languagesItems = languages.map((language: string) => {
       return (
@@ -74,6 +86,7 @@ export class NavigationBar extends Component<IProps> {
               </Link>
             </NavLink>
           </NavItem>
+          {serverButton}
           <UncontrolledDropdown nav inNavbar>
             <DropdownToggle nav caret>
               {dropdownTitle}
@@ -85,6 +98,10 @@ export class NavigationBar extends Component<IProps> {
         </Nav>
       </Navbar>
     );
+  }
+
+  protected handleServerClick(): void {
+    window.open(constants.JSON_SERVER_API_URL, '_blank');
   }
 
   protected handleDropdownItemClick(language: string): void {
