@@ -1,4 +1,5 @@
 module.exports = {
+  testURL: "http://localhost",
   globals: {
     'ts-jest': {
       'tsConfigFile': './tsconfig.jest.json',
