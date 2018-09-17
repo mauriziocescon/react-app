@@ -84,7 +84,7 @@ module.exports = (env) => {
                 loader: 'typings-for-css-modules-loader',
                 options: {camelCase: true, modules: true, minimize: true, namedExport: true},
               },
-              {loader: 'resolve-url-loader'},
+              {loader: 'resolve-url-loader', options: {absolute: true}},
               {loader: 'sass-loader', options: {sourceMap: true}},
               {loader: 'sass-resources-loader', options: {resources: ['./src/assets/stylesheets/all.scss']}},
             ],
@@ -102,7 +102,7 @@ module.exports = (env) => {
             fallback: 'style-loader',
             use: [
               {loader: 'css-loader', options: {minimize: true, modules: false}},
-              {loader: 'resolve-url-loader'},
+              {loader: 'resolve-url-loader', options: {absolute: true}},
               {loader: 'sass-loader', options: {sourceMap: true}},
             ],
           }),
