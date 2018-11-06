@@ -72,7 +72,7 @@
     "@types/react": "16.4.18",
     "@types/react-dom": "16.0.9",
     "@types/react-fontawesome": "1.6.4",
-    "@types/react-intl": "2.3.11",
+    "@types/react-intl": "2.3.9",
     "@types/react-intl-redux": "0.1.10",
     "@types/react-redux": "6.0.9",
     "@types/react-router-dom": "4.3.1",
