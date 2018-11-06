@@ -1,10 +1,15 @@
-import { intlReducer } from 'react-intl-redux';
-import { routerReducer } from 'react-router-redux';
+import { intlReducer, IntlState } from 'react-intl-redux';
+import { routerReducer, RouterState } from 'react-router-redux';
 import { combineReducers } from 'redux';
 
 import users from './users.reducer';
 
-const rootReducer = combineReducers({
+export interface IAppState {
+  intl: IntlState | undefined;
+  router: RouterState;
+}
+
+const rootReducer = combineReducers<any>({
   intl: intlReducer,
   router: routerReducer,
   users,
