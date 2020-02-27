@@ -4,7 +4,7 @@ import { IntlProvider } from 'react-intl-redux';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
 
-import createHistory from 'history/createBrowserHistory';
+import { createBrowserHistory } from 'history';
 
 import App from './App/App';
 
@@ -15,7 +15,7 @@ export class Root extends Component<any, any> {
   }
 
   public render(): ReactNode {
-    const history = createHistory();
+    const history = createBrowserHistory();
 
     return (
       <Provider store={this.props.store}>
