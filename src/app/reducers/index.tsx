@@ -12,7 +12,7 @@ export interface IAppState {
 const rootReducer = (history: any) => {
   return combineReducers<any>({
     intl: intlReducer,
-    router: connectRouter,
+    router: connectRouter(history),
     users,
   });
 };
