@@ -8,7 +8,7 @@ import 'react-intl';
 import 'react-intl-redux';
 import 'react-redux';
 import 'react-router-dom';
-import 'react-router-redux';
+import 'connected-react-router';
 import 'reactstrap';
 import 'redux';
 import 'redux-saga';

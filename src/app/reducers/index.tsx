@@ -1,5 +1,5 @@
 import { intlReducer, IntlState } from 'react-intl-redux';
-import { routerReducer, RouterState } from 'react-router-redux';
+import { connectRouter, RouterState } from 'connected-react-router';
 import { combineReducers } from 'redux';
 
 import users from './users.reducer';
@@ -9,10 +9,12 @@ export interface IAppState {
   router: RouterState;
 }
 
-const rootReducer = combineReducers<any>({
-  intl: intlReducer,
-  router: routerReducer,
-  users,
-});
+const rootReducer = (history: any) => {
+  return combineReducers<any>({
+    intl: intlReducer,
+    router: connectRouter,
+    users,
+  });
+};
 
 export default rootReducer;
