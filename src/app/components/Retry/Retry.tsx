@@ -6,7 +6,7 @@ import {
   Row,
 } from 'reactstrap';
 
-import * as styles from './Retry.scss';
+import styles from './Retry.scss';
 
 interface IProps {
   onRetryClick: (event: any) => void;
@@ -23,7 +23,7 @@ export class Retry extends Component<IProps> {
     return (
       <Row>
         <Col size={12}>
-          <h3 className={styles.retryMessage} onClick={this.handleClick}>
+          <h3 className={styles['RetryMessage']} onClick={this.handleClick}>
             <FormattedMessage
               id='retry.message'
               defaultMessage='Retry'

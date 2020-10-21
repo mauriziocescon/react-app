@@ -6,7 +6,7 @@ import {
   Row,
 } from 'reactstrap';
 
-import * as styles from './LoadCompleted.scss';
+import styles from './LoadCompleted.scss';
 
 export class LoadCompleted extends Component {
 
@@ -14,7 +14,7 @@ export class LoadCompleted extends Component {
     return (
       <Row>
         <Col size={12}>
-          <h3 className={styles.loadCompletedMessage}>
+          <h3 className={styles['LoadCompletedMessage']}>
             <FormattedMessage
               id='load-completed.message'
               defaultMessage='Load completed'

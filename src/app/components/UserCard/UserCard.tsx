@@ -11,7 +11,7 @@ import {
 
 import { User } from '../../models';
 
-import * as styles from './UserCard.scss';
+import styles from './UserCard.scss';
 
 interface IProps extends InjectedIntlProps {
   user: User;
@@ -31,13 +31,13 @@ export class UserCard extends Component<IProps> {
 
   public render(): ReactNode {
     return (
-      <Card className={styles.userCard}>
+      <Card className={styles['UserCard']}>
         <CardBody>
           <CardTitle>
             {this.user.name + ' (' + this.user.username + ' )'}
           </CardTitle>
           <CardText>
-            <span className={styles.userLabel}>
+            <span className={styles['UserLabel']}>
               <FormattedMessage
                 id='user-row.address'
                 defaultMessage='Address'
@@ -46,40 +46,40 @@ export class UserCard extends Component<IProps> {
             <span className={styles.userValue}>
               {this.user.address.street + ' ' + this.user.address.suite + ', ' + this.user.address.city + ' (' + this.user.address.zipcode + ')'}
             </span>
-            <span className={styles.userLabel}>
+            <span className={styles['UserLabel']}>
               <FormattedMessage
                 id='user-row.email'
                 defaultMessage='Email'
               />
             </span>
-            <span className={styles.userValue}>
+            <span className={styles['UserValue']}>
               {this.user.email}
             </span>
-            <span className={styles.userLabel}>
+            <span className={styles['UserLabel']}>
               <FormattedMessage
                 id='user-row.phone'
                 defaultMessage='Phone'
               />
             </span>
-            <span className={styles.userValue}>
+            <span className={styles['UserValue']}>
               {this.user.phone}
             </span>
-            <span className={styles.userLabel}>
+            <span className={styles['UserLabel']}>
               <FormattedMessage
                 id='user-row.website'
                 defaultMessage='Website'
               />
             </span>
-            <span className={styles.userValue}>
+            <span className={styles['UserValue']}>
               {this.user.website}
             </span>
-            <span className={styles.userLabel}>
+            <span className={styles['UserLabel']}>
               <FormattedMessage
                 id='user-row.company'
                 defaultMessage='Company'
               />
             </span>
-            <span className={styles.userValue}>
+            <span className={styles['UserValue']}>
               {this.user.company.name + ' ' + this.user.company.catchPhrase + this.user.company.bs}
             </span>
           </CardText>

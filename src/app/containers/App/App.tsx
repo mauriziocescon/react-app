@@ -3,7 +3,7 @@ import { Component, ReactNode } from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 
-import * as styles from './App.scss';
+import styles from './App.scss';
 
 import { changeLanguage } from '../../actions';
 
@@ -29,13 +29,13 @@ class App extends Component<any, any> {
 
     return (
       <BrowserRouter>
-        <div className={styles.app}>
+        <div className={styles['App']}>
           <NavigationBar
             selectedLanguage={selectedLanguage}
             availableLanguages={availableLanguages}
             onLanguageChange={this.handleLanguageChange}
           />
-          <div className={styles.appMainContent}>
+          <div className={styles['App-Main-Content']}>
             <Switch>
               <Route path='/albums' component={Albums}/>
               <Route path='/users' component={Users}/>

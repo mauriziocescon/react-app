@@ -6,7 +6,7 @@ import {
   Row,
 } from 'reactstrap';
 
-import * as styles from './Loading.scss';
+import styles from './Loading.scss';
 
 export class Loading extends Component {
 
@@ -14,7 +14,7 @@ export class Loading extends Component {
     return (
       <Row>
         <Col size={12}>
-          <h3 className={styles.loadingMessage}>
+          <h3 className={styles['LoadingMessage']}>
             <FormattedMessage
               id='loading.message'
               defaultMessage='Loading'

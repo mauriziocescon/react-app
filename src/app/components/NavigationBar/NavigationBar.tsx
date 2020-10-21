@@ -18,7 +18,7 @@ import {
 
 import constants from '../../constants';
 
-import * as styles from './NavigationBar.scss';
+import styles from './NavigationBar.scss';
 
 interface IProps {
   selectedLanguage: string;
@@ -35,7 +35,7 @@ export class NavigationBar extends Component<IProps> {
   }
 
   get navBarClasses(): any {
-    return `bg-secondary ${styles.navigationBar}`;
+    return `bg-secondary ${styles['NavigationBar']}`;
   }
 
   public render(): ReactNode {
@@ -58,7 +58,7 @@ export class NavigationBar extends Component<IProps> {
     return (
       <Navbar className={this.navBarClasses} expand='md' fixed='top' light>
         <NavbarBrand>
-          <span className={styles.navbarBrand}>
+          <span className={styles['NavbarBrand']}>
              <FormattedMessage
                id='navigation-bar.title'
                defaultMessage='Title'
@@ -68,7 +68,7 @@ export class NavigationBar extends Component<IProps> {
         <Nav className='ml-auto' navbar>
           <NavItem>
             <NavLink>
-              <Link to='/albums' className={styles.navigatorBarLink}>
+              <Link to='/albums' className={styles['NavigatorBarLink']}>
                 <FormattedMessage
                   id='navigation-bar.albums'
                   defaultMessage='Albums'
@@ -78,7 +78,7 @@ export class NavigationBar extends Component<IProps> {
           </NavItem>
           <NavItem>
             <NavLink>
-              <Link to='/users' className={styles.navigatorBarLink}>
+              <Link to='/users' className={styles['NavigatorBarLink']}>
                 <FormattedMessage
                   id='navigation-bar.users'
                   defaultMessage='Albums'

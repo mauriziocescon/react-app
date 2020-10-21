@@ -12,7 +12,7 @@ import {
   Row,
 } from 'reactstrap';
 
-import * as styles from './TextSearch.scss';
+import styles from './TextSearch.scss';
 
 interface IProps extends InjectedIntlProps {
   value: string;

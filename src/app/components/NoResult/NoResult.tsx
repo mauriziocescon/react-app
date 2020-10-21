@@ -6,7 +6,7 @@ import {
   Row,
 } from 'reactstrap';
 
-import * as styles from './NoResult.scss';
+import styles from './NoResult.scss';
 
 export class NoResult extends Component {
 
@@ -14,7 +14,7 @@ export class NoResult extends Component {
     return (
       <Row>
         <Col size={12}>
-          <h3 className={styles.noResultMessage}>
+          <h3 className={styles['NoResultMessage']}>
             <FormattedMessage
               id='no-result.message'
               defaultMessage='Empty'
