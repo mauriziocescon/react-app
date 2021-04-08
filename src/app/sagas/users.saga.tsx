@@ -7,6 +7,7 @@ import { fetchUsers } from '../apis';
 export function* fetchData(action: any) {
   try {
     yield delay(1000);
+    // @ts-ignore
     const data = yield call(fetchUsers, action.userTextSearch);
     yield put(receiveUsers(data));
   } catch (error) {
