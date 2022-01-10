@@ -13,7 +13,7 @@ $gray-color: #666 !default;
 // -------------------------------------------------------
 // Bootstrap variables
 
-//== Colors
+// == Colors
 $theme-colors: (
   primary: $primary-color,
   secondary: $secondary-color,
@@ -25,22 +25,21 @@ $theme-colors: (
   dark: $gray-color
 );
 
-//== Typography
+// == Typography
 $font-size-base: 1rem;
 $font-family-base: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
 
-//== Grid system
+// == Grid system
 $grid-gutter-width: 8px;
 
-//== Navbar
+// == Navbar
 $navbar-padding-y: 0.75rem;
-
 $navbar-light-color: $accent-color;
 $navbar-light-hover-color: $accent-color;
 
-//== Buttons
+// == Buttons
 
-// Forms
+// == Forms
 $input-group-addon-bg: $primary-color;
 
 // -------------------------------------------------------
