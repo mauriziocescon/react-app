@@ -48,7 +48,7 @@ export class TextSearch extends Component<IProps> {
               />
               <InputGroupAddon addonType='append'>
                 <Button color='primary' onClick={this.handleClick}>
-                  <FontAwesome className='Addon' name={this.value ? 'remove' : 'search'}/>
+                  <FontAwesome className='Addon' name={this.value ? 'times' : 'search'}/>
                 </Button>
               </InputGroupAddon>
             </InputGroup>
