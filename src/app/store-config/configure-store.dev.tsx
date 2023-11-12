@@ -17,7 +17,6 @@ const configureStore = (preloadedState: any) => {
   const middleware = [thunk, saga, routerMiddleware(history), createLogger()];
 
   // compose lets you apply several store enhancers in a row
-  // tslint:disable-next-line
   // @ts-ignore
   const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 

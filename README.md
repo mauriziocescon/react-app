@@ -51,7 +51,7 @@ Application currently in beta
 
 10. [Babel](https://babeljs.io/) 
 
-11. [TSLint](https://palantir.github.io/tslint/) 
+11. [EsLint](https://eslint.org)
 
 12. [Stylelint](https://stylelint.io/) 
 
